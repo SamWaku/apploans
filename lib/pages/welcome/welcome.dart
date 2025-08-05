@@ -17,6 +17,22 @@ class _WelcomeState extends State<Welcome> {
       child: Scaffold(
         body: Container(
           width: 375.w,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              PageView(
+                children: [
+                  SizedBox(
+                    width: 345.w,
+                    height: 345.w,
+                    child: Text(
+                      "Image One"
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
