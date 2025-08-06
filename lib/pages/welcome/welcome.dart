@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,6 +29,21 @@ class _WelcomeState extends State<Welcome> {
                   _page(3, context, "setup account", "We've got you!", "No tedious documentation and onboarding. Get a loan with us.", "image path" )
                 ],
               ),
+              Positioned(
+                  bottom: 100.h,
+                  child: DotsIndicator(
+                    dotsCount: 3,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    decorator: DotsDecorator(
+                      color: Colors.grey,
+                      size: Size.square(8.0),
+                      activeColor: Colors.blue,
+                      activeSize: const Size(10.0, 8.0),
+                      activeShape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0)
+                      )
+                    ),
+              ))
             ],
           ),
         ),

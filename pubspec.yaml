@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_bloc:
   flutter_screenutil:
+  dots_indicator:
 
   cupertino_icons: ^1.0.8
 
