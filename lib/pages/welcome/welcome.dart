@@ -23,7 +23,9 @@ class _WelcomeState extends State<Welcome> {
             children: [
               PageView(
                 children: [
-                  _page()
+                  _page(1, context, "next", "Out of Money?", "Why stress about your financial needs. When there's us", "image path" ),
+                  _page(2, context, "almost there", "Need a loan?", "No one needs to be inconvenienced with a flexible repayment solution like ours.", "image path" ),
+                  _page(3, context, "setup account", "We've got you!", "No tedious documentation and onboarding. Get a loan with us.", "image path" )
                 ],
               ),
             ],
@@ -33,7 +35,7 @@ class _WelcomeState extends State<Welcome> {
     );
   }
 
-  Widget _page(){
+  Widget _page(int index, BuildContext context, String buttonName, String title, String subTitle, String imageOath){
     return Column(
       children: [
         Column(
@@ -45,7 +47,7 @@ class _WelcomeState extends State<Welcome> {
             ),
             Container(
               child: Text(
-                "Need a loan?",
+                title,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 24.sp,
@@ -57,7 +59,7 @@ class _WelcomeState extends State<Welcome> {
               width: 375.w,
               padding: EdgeInsets.only(left: 30.w, right: 30.w),
               child: Text(
-                "Why stress about your financial needs. Get a loan with us.",
+                subTitle,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.5),
                   fontSize: 14.sp,
@@ -87,7 +89,7 @@ class _WelcomeState extends State<Welcome> {
               ),
               child: Center(
                 child: Text(
-                  "next",
+                  buttonName,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.sp,
