@@ -1,4 +1,5 @@
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
+import 'package:apploans/pages/welcome/bloc/welcome_events.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_states.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,6 +29,10 @@ class _WelcomeState extends State<Welcome> {
                   alignment: Alignment.topCenter,
                   children: [
                     PageView(
+                      onPageChanged: (index){
+                        state.page = index;
+                        BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
+                      },
                       children: [
                         _page(1, context, "next", "Out of Money?", "Why stress about your financial needs. When there's us", "image path" ),
                         _page(2, context, "almost there", "Need a loan?", "No one needs to be inconvenienced with a flexible repayment solution like ours.", "image path" ),
@@ -37,6 +42,7 @@ class _WelcomeState extends State<Welcome> {
                     Positioned(
                         bottom: 100.h,
                         child: DotsIndicator(
+                          position: state.page.toDouble(),
                           dotsCount: 3,
                           mainAxisAlignment: MainAxisAlignment.center,
                           decorator: DotsDecorator(
