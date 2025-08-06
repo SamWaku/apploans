@@ -53,7 +53,11 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
+                        margin: EdgeInsets.only(
+                          top: 100.h,
+                          left: 25.w,
+                          right: 25.w,
+                        ),
                         width: 375.w,
                         height: 50.h,
                         decoration: BoxDecoration(
@@ -61,11 +65,24 @@ class _WelcomeState extends State<Welcome> {
                           borderRadius: BorderRadius.all(Radius.circular(15.w)),
                           boxShadow: [
                             BoxShadow(
-                              colo
-                            )
-                          ]
+                              color: Colors.grey.withOpacity(0.1),
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 1),
+                            ),
+                          ],
                         ),
-                      )
+                        child: Center(
+                          child: Text(
+                            "next",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.normal
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
