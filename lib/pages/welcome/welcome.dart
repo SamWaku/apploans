@@ -21,58 +21,84 @@ class _WelcomeState extends State<Welcome> {
       color: Colors.white,
       child: Scaffold(
         body: BlocBuilder<WelcomeBloc, WelcomeState>(
-            builder: (context, state){
-              return Container(
-                margin: EdgeInsets.only(top: 34.h),
-                width: 375.w,
-                child: Stack(
-                  alignment: Alignment.topCenter,
-                  children: [
-                    PageView(
-                      onPageChanged: (index){
-                        state.page = index;
-                        BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
-                      },
-                      children: [
-                        _page(1, context, "next", "Out of Money?", "Why stress about your financial needs. When there's us", "image path" ),
-                        _page(2, context, "almost there", "Need a loan?", "No one needs to be inconvenienced with a flexible repayment solution like ours.", "image path" ),
-                        _page(3, context, "setup account", "We've got you!", "No tedious documentation and onboarding. Get a loan with us.", "image path" )
-                      ],
+          builder: (context, state) {
+            return Container(
+              margin: EdgeInsets.only(top: 34.h),
+              width: 375.w,
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  PageView(
+                    onPageChanged: (index) {
+                      state.page = index;
+                      BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
+                    },
+                    children: [
+                      _page(
+                        1,
+                        context,
+                        "next",
+                        "Out of Money?",
+                        "Why stress about your financial needs. When there's us",
+                        "assets/images/boy.png",
+                      ),
+                      _page(
+                        2,
+                        context,
+                        "almost there",
+                        "Need a loan?",
+                        "No one needs to be inconvenienced with a flexible repayment solution like ours.",
+                        "assets/images/reading.png",
+                      ),
+                      _page(
+                        3,
+                        context,
+                        "setup account",
+                        "We've got you!",
+                        "No tedious documentation and onboarding. Get a loan with us.",
+                        "assets/images/man.png",
+                      ),
+                    ],
+                  ),
+                  Positioned(
+                    bottom: 100.h,
+                    child: DotsIndicator(
+                      position: state.page.toDouble(),
+                      dotsCount: 3,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      decorator: DotsDecorator(
+                        color: Colors.grey,
+                        size: Size.square(8.0),
+                        activeColor: Colors.blue,
+                        activeSize: const Size(18.0, 8.0),
+                        activeShape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                     ),
-                    Positioned(
-                        bottom: 100.h,
-                        child: DotsIndicator(
-                          position: state.page.toDouble(),
-                          dotsCount: 3,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          decorator: DotsDecorator(
-                              color: Colors.grey,
-                              size: Size.square(8.0),
-                              activeColor: Colors.blue,
-                              activeSize: const Size(10.0, 8.0),
-                              activeShape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5.0)
-                              )
-                          ),
-                        ))
-                  ],
-                ),
-              );
-            }),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
 
-  Widget _page(int index, BuildContext context, String buttonName, String title, String subTitle, String imageOath){
+  Widget _page(
+    int index,
+    BuildContext context,
+    String buttonName,
+    String title,
+    String subTitle,
+    String imageOath,
+  ) {
     return Column(
       children: [
         Column(
           children: [
-            SizedBox(
-              width: 345.w,
-              height: 345.w,
-              child: Text("Image One"),
-            ),
+            SizedBox(width: 345.w, height: 345.w, child: Text("Image One")),
             Container(
               child: Text(
                 title,
@@ -96,11 +122,7 @@ class _WelcomeState extends State<Welcome> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
-                top: 100.h,
-                left: 25.w,
-                right: 25.w,
-              ),
+              margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
               width: 375.w,
               height: 50.h,
               decoration: BoxDecoration(
@@ -119,9 +141,9 @@ class _WelcomeState extends State<Welcome> {
                 child: Text(
                   buttonName,
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.normal
+                    color: Colors.white,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.normal,
                   ),
                 ),
               ),
