@@ -11,7 +11,12 @@ AppBar buildAppBar() {
 //context needed for accessing bloc
 Widget buildThirdPartyLogin(BuildContext context) {
   return Container(
+    margin: EdgeInsets.only(
+      top: 40.h,
+      bottom: 20.h
+    ),
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         _reusableIcons("google"),
         _reusableIcons("apple"),
