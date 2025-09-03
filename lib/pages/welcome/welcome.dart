@@ -133,11 +133,11 @@ class _WelcomeState extends State<Welcome> {
                 if (index < 3) {
                   pageController.animateToPage(
                     index,
-                    duration: const Duration(milliseconds: 1000),
+                    duration: const Duration(milliseconds: 500),
                     curve: Curves.decelerate,
                   );
                 } else {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage(title: "Home")));
+                  Navigator.of(context).pushNamedAndRemoveUntil("signIn", (route) => false);
                 }
               },
               child: Container(
