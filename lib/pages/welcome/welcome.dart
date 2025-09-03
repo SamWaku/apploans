@@ -15,6 +15,7 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  PageController pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,6 +30,7 @@ class _WelcomeState extends State<Welcome> {
                 alignment: Alignment.topCenter,
                 children: [
                   PageView(
+                    controller: pageController,
                     onPageChanged: (index) {
                       state.page = index;
                       BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
@@ -98,7 +100,11 @@ class _WelcomeState extends State<Welcome> {
       children: [
         Column(
           children: [
-            SizedBox(width: 345.w, height: 345.w, child: Image.asset(imagePath)),
+            SizedBox(
+              width: 345.w,
+              height: 345.w,
+              child: Image.asset(imagePath, fit: BoxFit.cover),
+            ),
             Container(
               child: Text(
                 title,
@@ -121,29 +127,40 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
-              width: 375.w,
-              height: 50.h,
-              decoration: BoxDecoration(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.all(Radius.circular(15.w)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    spreadRadius: 1,
-                    blurRadius: 2,
-                    offset: Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: Center(
-                child: Text(
-                  buttonName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.normal,
+            GestureDetector(
+              onTap: () {
+                if (index < 3) {
+                  pageController.animateToPage(
+                    index,
+                    duration: const Duration(milliseconds: 10),
+                    curve: Curves.decelerate,
+                  );
+                } else {}
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
+                width: 375.w,
+                height: 50.h,
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(15.w)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      spreadRadius: 1,
+                      blurRadius: 2,
+                      offset: Offset(0, 1),
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    buttonName,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
                 ),
               ),
