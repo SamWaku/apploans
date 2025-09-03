@@ -132,7 +132,7 @@ class _WelcomeState extends State<Welcome> {
                 if (index < 3) {
                   pageController.animateToPage(
                     index,
-                    duration: const Duration(milliseconds: 10),
+                    duration: const Duration(milliseconds: 1000),
                     curve: Curves.decelerate,
                   );
                 } else {}
