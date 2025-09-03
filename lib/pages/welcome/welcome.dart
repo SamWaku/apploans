@@ -1,3 +1,4 @@
+import 'package:apploans/main.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_events.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_states.dart';
@@ -135,7 +136,9 @@ class _WelcomeState extends State<Welcome> {
                     duration: const Duration(milliseconds: 1000),
                     curve: Curves.decelerate,
                   );
-                } else {}
+                } else {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage(title: "Home")));
+                }
               },
               child: Container(
                 margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
