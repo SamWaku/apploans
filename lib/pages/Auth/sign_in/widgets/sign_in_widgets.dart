@@ -10,27 +10,20 @@ AppBar buildAppBar() {
 
 //context needed for accessing bloc
 Widget buildThirdPartyLogin(BuildContext context) {
-  return Container(child: Row(
-    children: [
-      GestureDetector(
-        onTap: (){
-
-        },
-        child: SizedBox(
-          width: 40.w,
-          height: 40.w,
-          child: Image.asset("assets/icons/google.png"),
-        ),
-      )
-    ],
-  ));
+  return Container(
+    child: Row(
+      children: [
+        _reusableIcons("google"),
+        _reusableIcons("apple"),
+        _reusableIcons("facebook"),
+      ],
+    ),
+  );
 }
 
-Widget reusableIcons(String iconName){
+Widget _reusableIcons(String iconName) {
   return GestureDetector(
-    onTap: (){
-
-    },
+    onTap: () {},
     child: SizedBox(
       width: 40.w,
       height: 40.w,
