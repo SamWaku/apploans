@@ -25,3 +25,16 @@ Widget buildThirdPartyLogin(BuildContext context) {
     ],
   ));
 }
+
+Widget reusableIcons(String iconName){
+  return GestureDetector(
+    onTap: (){
+
+    },
+    child: SizedBox(
+      width: 40.w,
+      height: 40.w,
+      child: Image.asset("assets/icons/$iconName.png"),
+    ),
+  );
+}

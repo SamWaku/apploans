@@ -1,4 +1,4 @@
-import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widget.dart';
+import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
