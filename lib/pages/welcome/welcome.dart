@@ -92,13 +92,13 @@ class _WelcomeState extends State<Welcome> {
     String buttonName,
     String title,
     String subTitle,
-    String imageOath,
+    String imagePath,
   ) {
     return Column(
       children: [
         Column(
           children: [
-            SizedBox(width: 345.w, height: 345.w, child: Text("Image One")),
+            SizedBox(width: 345.w, height: 345.w, child: Image.asset(imagePath)),
             Container(
               child: Text(
                 title,
