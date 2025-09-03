@@ -13,7 +13,14 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar()
+      appBar: buildAppBar(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            buildThirdPartyLogin(context)
+          ],
+        ),
+      ),
     );
   }
 }
