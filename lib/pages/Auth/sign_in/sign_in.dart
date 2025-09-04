@@ -22,7 +22,8 @@ class _SignInState extends State<SignIn> {
             buildThirdPartyLogin(context),
             Center(child: reusableText("or login with you email")),
             Container(
-              margin: EdgeInsets.only(top: 10.h),
+              margin: EdgeInsets.only(top: 40.h),
+              padding: EdgeInsets.only(left: 25.h),
               child: Column(
                 children: [
                   reusableText("Email")
