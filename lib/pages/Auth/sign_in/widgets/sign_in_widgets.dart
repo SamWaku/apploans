@@ -47,3 +47,9 @@ Widget reusableText(String text) {
     ),
   );
 }
+
+Widget buildTextField(String text, String textType){
+  return Container(
+
+  );
+}
