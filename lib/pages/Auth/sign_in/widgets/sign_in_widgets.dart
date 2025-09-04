@@ -50,6 +50,8 @@ Widget reusableText(String text) {
 
 Widget buildTextField(String text, String textType){
   return Container(
-
+  width: 225.w,
+    height: 50.h,
+    color: Colors.red,
   );
 }
