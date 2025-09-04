@@ -36,3 +36,9 @@ Widget _reusableIcons(String iconName) {
     ),
   );
 }
+
+Widget reusableText(String text){
+  return Container(
+    margin: EdgeInsets.only(bottom: 5.h),
+  );
+}

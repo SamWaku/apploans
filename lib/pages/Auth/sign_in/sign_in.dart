@@ -17,7 +17,8 @@ class _SignInState extends State<SignIn> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            buildThirdPartyLogin(context)
+            buildThirdPartyLogin(context),
+            reusableText("or login with you email")
           ],
         ),
       ),
