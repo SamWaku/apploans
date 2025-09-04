@@ -1,6 +1,7 @@
 import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -16,9 +17,18 @@ class _SignInState extends State<SignIn> {
       appBar: buildAppBar(),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             buildThirdPartyLogin(context),
-            reusableText("or login with you email")
+            Center(child: reusableText("or login with you email")),
+            Container(
+              margin: EdgeInsets.only(top: 10.h),
+              child: Column(
+                children: [
+                  reusableText("Email")
+                ],
+              ),
+            )
           ],
         ),
       ),
