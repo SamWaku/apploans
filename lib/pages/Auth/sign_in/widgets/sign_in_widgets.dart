@@ -11,10 +11,7 @@ AppBar buildAppBar() {
 //context needed for accessing bloc
 Widget buildThirdPartyLogin(BuildContext context) {
   return Container(
-    margin: EdgeInsets.only(
-      top: 40.h,
-      bottom: 20.h
-    ),
+    margin: EdgeInsets.only(top: 40.h, bottom: 20.h),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -37,9 +34,16 @@ Widget _reusableIcons(String iconName) {
   );
 }
 
-Widget reusableText(String text){
+Widget reusableText(String text) {
   return Container(
     margin: EdgeInsets.only(bottom: 5.h),
-    child: Text(text),
+    child: Text(
+      text,
+      style: TextStyle(
+        color: Colors.black.withOpacity(0.5),
+        fontWeight: FontWeight.normal,
+        fontSize: 14.sp,
+      ),
+    ),
   );
 }
