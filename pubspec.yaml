@@ -11,6 +11,9 @@ dependencies:
     sdk: flutter
   flutter_bloc:
   flutter_screenutil:
+  dots_indicator:
+  intl:
+  cloud_firestore:
 
   cupertino_icons: ^1.0.8
 
@@ -22,3 +25,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
