@@ -106,3 +106,16 @@ Widget buildTextField(
     ),
   );
 }
+
+Widget forgotPasswordText(){
+  return Container(
+    width: 260.w,
+    height: 50.h,
+    child: GestureDetector(
+      onTap: (){
+
+      },
+      child: Text("forgot password?", style: TextStyle(color: Colors.black)),
+    ),
+  );
+}
