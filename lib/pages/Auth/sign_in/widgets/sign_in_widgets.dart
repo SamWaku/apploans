@@ -91,6 +91,9 @@ Widget buildTextField(String text, String textType){
                   borderSide: BorderSide(
                       color: Colors.transparent
                   )
+              ),
+              hintStyle: TextStyle(
+                color: Colors.grey.withOpacity(0.6)
               )
             ),
           ),
