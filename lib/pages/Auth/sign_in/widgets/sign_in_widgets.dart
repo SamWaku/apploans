@@ -48,7 +48,7 @@ Widget reusableText(String text) {
   );
 }
 
-Widget buildTextField(String text, String textType, String iconName){
+Widget buildTextField(String text, String textType, String iconName, String hintText){
   return Container(
   width: 300.w,
     height: 50.h,
@@ -71,7 +71,7 @@ Widget buildTextField(String text, String textType, String iconName){
           child: TextField(
             keyboardType: TextInputType.multiline,
             decoration: InputDecoration(
-              hintText: "Enter your email",
+              hintText: hintText,
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.transparent
