@@ -48,7 +48,7 @@ Widget reusableText(String text) {
   );
 }
 
-Widget buildTextField(String text, String textType){
+Widget buildTextField(String text, String textType, String iconName){
   return Container(
   width: 300.w,
     height: 50.h,
@@ -65,7 +65,7 @@ Widget buildTextField(String text, String textType){
           child: Image.asset("assets/icons/user.png"),
         ),
         Container(
-          padding: EdgeInsets.only(top: 3.h),
+          padding: EdgeInsets.only(top: 4.h),
           width: 270.w,
           height: 50.h,
           child: TextField(
@@ -95,6 +95,12 @@ Widget buildTextField(String text, String textType){
               hintStyle: TextStyle(
                 color: Colors.grey.withOpacity(0.6)
               )
+            ),
+            style: TextStyle(
+              color: Colors.black,
+              fontFamily: "Avenir",
+              fontWeight: FontWeight.normal,
+              fontSize: 12.sp
             ),
           ),
         )
