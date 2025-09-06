@@ -57,5 +57,15 @@ Widget buildTextField(String text, String textType){
       borderRadius: BorderRadius.all(Radius.circular(15.w)),
       border: Border.all(color: Colors.black)
     ),
+    child: Row(
+      children: [
+        Container(
+          width: 16.w,
+          height: 16.w,
+          margin: EdgeInsets.only(left: 10.h),
+          child: Image.asset("assets/icons/user.png"),
+        )
+      ],
+    ),
   );
 }
