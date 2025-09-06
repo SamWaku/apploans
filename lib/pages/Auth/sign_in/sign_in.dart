@@ -28,7 +28,7 @@ class _SignInState extends State<SignIn> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   reusableText("Email"),
-                  buildTextField("email", "Email")
+                  buildTextField("email", "Email", "user")
                 ],
               ),
             )

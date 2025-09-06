@@ -62,7 +62,7 @@ Widget buildTextField(String text, String textType, String iconName){
           width: 16.w,
           height: 16.w,
           margin: EdgeInsets.only(left: 10.h),
-          child: Image.asset("assets/icons/user.png"),
+          child: Image.asset("assets/icons/$iconName.png"),
         ),
         Container(
           padding: EdgeInsets.only(top: 4.h),
