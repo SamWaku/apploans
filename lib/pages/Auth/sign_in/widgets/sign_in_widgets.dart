@@ -99,7 +99,7 @@ Widget buildTextField(
               fontSize: 12.sp,
             ),
             autocorrect: false,
-            obscureText: textType=="password"?true:false,
+            obscureText: textType=="Password"?true:false,
           ),
         ),
       ],
