@@ -48,13 +48,19 @@ Widget reusableText(String text) {
   );
 }
 
-Widget buildTextField(String text, String textType, String iconName, String hintText){
+Widget buildTextField(
+  String text,
+  String textType,
+  String iconName,
+  String hintText,
+) {
   return Container(
-  width: 300.w,
+    width: 300.w,
     height: 50.h,
+    margin: EdgeInsets.only(bottom: 20.h),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(15.w)),
-      border: Border.all(color: Colors.black)
+      border: Border.all(color: Colors.black),
     ),
     child: Row(
       children: [
@@ -73,37 +79,27 @@ Widget buildTextField(String text, String textType, String iconName, String hint
             decoration: InputDecoration(
               hintText: hintText,
               border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.transparent
-                ),
+                borderSide: BorderSide(color: Colors.transparent),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.transparent
-                )
+                borderSide: BorderSide(color: Colors.transparent),
               ),
               disabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.transparent
-                )
+                borderSide: BorderSide(color: Colors.transparent),
               ),
               focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                      color: Colors.transparent
-                  )
+                borderSide: BorderSide(color: Colors.transparent),
               ),
-              hintStyle: TextStyle(
-                color: Colors.grey.withOpacity(0.6)
-              )
+              hintStyle: TextStyle(color: Colors.grey.withOpacity(0.6)),
             ),
             style: TextStyle(
               color: Colors.black,
               fontFamily: "Avenir",
               fontWeight: FontWeight.normal,
-              fontSize: 12.sp
+              fontSize: 12.sp,
             ),
           ),
-        )
+        ),
       ],
     ),
   );
