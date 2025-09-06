@@ -53,7 +53,6 @@ Widget buildTextField(String text, String textType){
   width: 300.w,
     height: 50.h,
     decoration: BoxDecoration(
-        color: Colors.red,
       borderRadius: BorderRadius.all(Radius.circular(15.w)),
       border: Border.all(color: Colors.black)
     ),
@@ -66,10 +65,34 @@ Widget buildTextField(String text, String textType){
           child: Image.asset("assets/icons/user.png"),
         ),
         Container(
+          padding: EdgeInsets.only(top: 3.h),
           width: 270.w,
-          height: 60.h,
+          height: 50.h,
           child: TextField(
-
+            keyboardType: TextInputType.multiline,
+            decoration: InputDecoration(
+              hintText: "Enter your email",
+              border: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.transparent
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.transparent
+                )
+              ),
+              disabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.transparent
+                )
+              ),
+              focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.transparent
+                  )
+              )
+            ),
           ),
         )
       ],
