@@ -98,6 +98,8 @@ Widget buildTextField(
               fontWeight: FontWeight.normal,
               fontSize: 12.sp,
             ),
+            autocorrect: false,
+            obscureText: textType=="password"?true:false,
           ),
         ),
       ],
