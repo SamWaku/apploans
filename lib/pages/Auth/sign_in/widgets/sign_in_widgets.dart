@@ -125,6 +125,7 @@ Widget buildLoginRegButton(String buttonName) {
     child: Container(
       width: 300.w,
       height: 50.h,
+      margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
         color: Colors.blueAccent,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
