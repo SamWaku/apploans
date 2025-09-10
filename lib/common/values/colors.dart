@@ -25,10 +25,10 @@ class AppColors {
 
   static const Color primaryElementBg = Color.fromARGB(255, 238, 121, 99);
 
-  // prured
-  static const Color pruRed = Color.fromARGB(255, 33, 150, 243);
+  // primary blue
+  static const Color payLaterBlue = Color.fromARGB(255, 33, 150, 243);
 
   // prugrey
-  static const Color pruGrey = Color.fromARGB(255, 91, 103, 112);
+  static const Color payLaterGrey = Color.fromARGB(255, 91, 103, 112);
 
 }
