@@ -99,7 +99,7 @@ Widget buildTextField(
               fontSize: 12.sp,
             ),
             autocorrect: false,
-            obscureText: textType=="Password"?true:false,
+            obscureText: textType == "Password" ? true : false,
           ),
         ),
       ],
@@ -107,15 +107,38 @@ Widget buildTextField(
   );
 }
 
-Widget forgotPasswordText(){
+Widget forgotPasswordText() {
   return Container(
     width: 260.w,
     height: 50.h,
     child: GestureDetector(
-      onTap: (){
-
-      },
+      onTap: () {},
       child: Text("forgot password?", style: TextStyle(color: Colors.black)),
+    ),
+  );
+}
+
+Widget buildLoginRegButton(String buttonName) {
+  return GestureDetector(
+    onTap: () {},
+
+    child: Container(
+      width: 300.w,
+      height: 50.h,
+      decoration: BoxDecoration(
+        color: Colors.blueAccent,
+        borderRadius: BorderRadius.all(Radius.circular(15.w)),
+      ),
+      child: Center(
+        child: Text(
+          buttonName,
+          style: TextStyle(
+            fontSize: 17.sp,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
     ),
   );
 }
