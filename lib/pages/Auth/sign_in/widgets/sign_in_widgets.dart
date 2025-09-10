@@ -1,9 +1,10 @@
+import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar buildAppBar() {
   return AppBar(
-    title: Text("Login", style: TextStyle(color: Colors.black)),
+    title: Text("Login", style: TextStyle(color: AppColors.primaryText)),
     centerTitle: true,
   );
 }
@@ -40,7 +41,7 @@ Widget reusableText(String text) {
     child: Text(
       text,
       style: TextStyle(
-        color: Colors.black.withOpacity(0.5),
+        color: AppColors.primarySecondaryElementText,
         fontWeight: FontWeight.normal,
         fontSize: 14.sp,
       ),
