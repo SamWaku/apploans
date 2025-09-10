@@ -32,7 +32,8 @@ class _SignInState extends State<SignIn> {
                   reusableText("Password"),
                   buildTextField("email", "Password", "lock", "Enter your password"),
                   forgotPasswordText(),
-                  buildLoginRegButton("Login")
+                  buildLoginRegButton("Login", "Login"),
+                  buildLoginRegButton("Register", "Register"),
                 ],
               ),
             )

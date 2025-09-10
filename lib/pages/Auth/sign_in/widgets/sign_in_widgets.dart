@@ -118,14 +118,14 @@ Widget forgotPasswordText() {
   );
 }
 
-Widget buildLoginRegButton(String buttonName) {
+Widget buildLoginRegButton(String buttonName, String buttonType) {
   return GestureDetector(
     onTap: () {},
 
     child: Container(
       width: 300.w,
       height: 50.h,
-      margin: EdgeInsets.only(top: 40.h),
+      margin: EdgeInsets.only(top: buttonType=="Login"?40.h:10.h),
       decoration: BoxDecoration(
         color: Colors.blueAccent,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
