@@ -130,6 +130,12 @@ Widget buildLoginRegButton(String buttonName, String buttonType) {
       decoration: BoxDecoration(
         color: Colors.blueAccent,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
+        boxShadow: [BoxShadow(
+          spreadRadius: 1,
+          blurRadius: 2,
+          offset: Offset(0,1),
+          color: Colors.grey.withOpacity(0.1)
+        )]
       ),
       child: Center(
         child: Text(
