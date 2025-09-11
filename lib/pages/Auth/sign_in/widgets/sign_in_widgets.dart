@@ -126,23 +126,30 @@ Widget buildLoginRegButton(String buttonName, String buttonType) {
     child: Container(
       width: 300.w,
       height: 50.h,
-      margin: EdgeInsets.only(top: buttonType=="Login"?40.h:15.h),
+      margin: EdgeInsets.only(top: buttonType == "Login" ? 40.h : 15.h),
       decoration: BoxDecoration(
-        color: Colors.blueAccent,
+        color: buttonType == "Login"
+            ? Colors.blueAccent
+            : AppColors.primaryBackground,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
-        boxShadow: [BoxShadow(
-          spreadRadius: 1,
-          blurRadius: 2,
-          offset: Offset(0,1),
-          color: Colors.grey.withOpacity(0.1)
-        )]
+        border: Border.all(
+          color: buttonType == "Login"? Colors.transparent : AppColors.primaryFourthElementText
+        ),
+        boxShadow: [
+          BoxShadow(
+            spreadRadius: 1,
+            blurRadius: 2,
+            offset: Offset(0, 1),
+            color: Colors.grey.withOpacity(0.1),
+          ),
+        ],
       ),
       child: Center(
         child: Text(
           buttonName,
           style: TextStyle(
             fontSize: 17.sp,
-            color: Colors.white,
+            color: buttonType=="Login"?Colors.white:AppColors.primaryText,
             fontWeight: FontWeight.w600,
           ),
         ),
