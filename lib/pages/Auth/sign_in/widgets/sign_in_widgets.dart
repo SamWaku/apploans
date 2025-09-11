@@ -61,7 +61,7 @@ Widget buildTextField(
     margin: EdgeInsets.only(bottom: 20.h),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(15.w)),
-      border: Border.all(color: Colors.black),
+      border: Border.all(color: AppColors.primaryFourthElementText),
     ),
     child: Row(
       children: [
@@ -91,10 +91,10 @@ Widget buildTextField(
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.transparent),
               ),
-              hintStyle: TextStyle(color: Colors.grey.withOpacity(0.6)),
+              hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
             ),
             style: TextStyle(
-              color: Colors.black,
+              color: AppColors.primaryText,
               fontFamily: "Avenir",
               fontWeight: FontWeight.normal,
               fontSize: 12.sp,
@@ -114,7 +114,7 @@ Widget forgotPasswordText() {
     height: 50.h,
     child: GestureDetector(
       onTap: () {},
-      child: Text("forgot password?", style: TextStyle(color: Colors.black)),
+      child: Text("forgot password?", style: TextStyle(color: AppColors.primaryText)),
     ),
   );
 }
@@ -133,7 +133,9 @@ Widget buildLoginRegButton(String buttonName, String buttonType) {
             : AppColors.primaryBackground,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
         border: Border.all(
-          color: buttonType == "Login"? Colors.transparent : AppColors.primaryFourthElementText
+          color: buttonType == "Login"
+              ? Colors.transparent
+              : AppColors.primaryFourthElementText,
         ),
         boxShadow: [
           BoxShadow(
@@ -149,7 +151,7 @@ Widget buildLoginRegButton(String buttonName, String buttonType) {
           buttonName,
           style: TextStyle(
             fontSize: 17.sp,
-            color: buttonType=="Login"?Colors.white:AppColors.primaryText,
+            color: buttonType == "Login" ? Colors.white : AppColors.primaryText,
             fontWeight: FontWeight.w600,
           ),
         ),
