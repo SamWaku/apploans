@@ -12,4 +12,8 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
       emit(state.copyWith(password: event.password));
     });
   }
+
+  void _emailEvent(EmailEvent event, Emitter<SignInState> emit){
+    emit(state.copyWith(email: event.email));
+  }
 }
