@@ -8,6 +8,6 @@ class EmailEvent extends SignInEvent{
 }
 
 class PasswordEvent extends SignInEvent{
-  final String Password;
-  const PasswordEvent(this.Password);
+  final String password;
+  const PasswordEvent(this.password);
 }
