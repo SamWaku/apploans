@@ -9,7 +9,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
     });
 
     on<PasswordEvent>((event, emit){
-      //what happens before and after a state
+      emit(state.copyWith(password: event.password));
     });
   }
 }
