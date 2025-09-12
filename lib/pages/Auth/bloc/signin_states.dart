@@ -4,10 +4,10 @@ class SignInState{
   const SignInState({this.email ="", this.password = ''});
 
   SignInState copyWith({
-    required String email, required String password
+     String? email,  String? password
 }){
     return SignInState(
-      email: email, password: password
+      email: email??this.email, password: password??this.password
     );
   }
 }
