@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/colors.dart';
 import 'package:apploans/main.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_events.dart';
@@ -70,9 +71,9 @@ class _WelcomeState extends State<Welcome> {
                       dotsCount: 3,
                       mainAxisAlignment: MainAxisAlignment.center,
                       decorator: DotsDecorator(
-                        color: Colors.grey,
+                        color: AppColors.payLaterGrey,
                         size: Size.square(8.0),
-                        activeColor: Colors.blue,
+                        activeColor: AppColors.payLaterBlue,
                         activeSize: const Size(18.0, 8.0),
                         activeShape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
@@ -145,7 +146,7 @@ class _WelcomeState extends State<Welcome> {
                 width: 375.w,
                 height: 50.h,
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: AppColors.payLaterBlue,
                   borderRadius: BorderRadius.all(Radius.circular(15.w)),
                   boxShadow: [
                     BoxShadow(
