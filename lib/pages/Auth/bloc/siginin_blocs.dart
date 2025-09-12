@@ -9,7 +9,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
     });
 
     on<PasswordEvent>((event, state){
-
+      //what happens before and after a state
     });
   }
 }
