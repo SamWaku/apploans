@@ -1,3 +1,4 @@
+import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => WelcomeBloc()),
         BlocProvider(lazy: false, create: (context) => AppBlocs()),
+        BlocProvider(create: (context) => SignInBloc())
       ],
       child: ScreenUtilInit(
         builder: (context, child) =>

@@ -1,6 +1,9 @@
+import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
+import 'package:apploans/pages/Auth/bloc/signin_states.dart';
 import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignIn extends StatefulWidget {
@@ -13,33 +16,35 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            buildThirdPartyLogin(context),
-            Center(child: reusableText("or login with you email")),
-            Container(
-              margin: EdgeInsets.only(top: 36.h),
-              padding: EdgeInsets.only(left: 25.h),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  reusableText("Email"),
-                  buildTextField("email", "Email", "user", "Enter your email"),
-                  reusableText("Password"),
-                  buildTextField("email", "Password", "lock", "Enter your password"),
-                  forgotPasswordText(),
-                  buildLoginRegButton("Login", "Login"),
-                  buildLoginRegButton("Register", "Register"),
-                ],
-              ),
-            )
-          ],
+    return BlocBuilder<SignInBloc, SignInState>(builder: (context, state){
+      return Scaffold(
+        appBar: buildAppBar(),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              buildThirdPartyLogin(context),
+              Center(child: reusableText("or login with you email")),
+              Container(
+                margin: EdgeInsets.only(top: 36.h),
+                padding: EdgeInsets.only(left: 25.h),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    reusableText("Email"),
+                    buildTextField("email", "Email", "user", "Enter your email"),
+                    reusableText("Password"),
+                    buildTextField("email", "Password", "lock", "Enter your password"),
+                    forgotPasswordText(),
+                    buildLoginRegButton("Login", "Login"),
+                    buildLoginRegButton("Register", "Register"),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
