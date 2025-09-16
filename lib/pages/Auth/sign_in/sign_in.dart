@@ -1,4 +1,5 @@
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
+import 'package:apploans/pages/Auth/bloc/signin_events.dart';
 import 'package:apploans/pages/Auth/bloc/signin_states.dart';
 import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,9 +33,16 @@ class _SignInState extends State<SignIn> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     reusableText("Email"),
-                    buildTextField("email", "Email", "user", "Enter your email"),
+                    buildTextField("email", "Email", "user", "Enter your email",
+                            (value){
+                              context.read<SignInBloc>().add(EmailEvent(value));
+                            }
+                    ),
                     reusableText("Password"),
-                    buildTextField("email", "Password", "lock", "Enter your password"),
+                    buildTextField("email", "Password", "lock", "Enter your password",
+                            (value){
+                          context.read<SignInBloc>().add(PasswordEvent(value));
+                        }),
                     forgotPasswordText(),
                     buildLoginRegButton("Login", "Login"),
                     buildLoginRegButton("Register", "Register"),

@@ -55,6 +55,7 @@ Widget buildTextField(
   String textType,
   String iconName,
   String hintText,
+    void Function(String value)? func
 ) {
   return Container(
     width: 300.w,
@@ -77,6 +78,7 @@ Widget buildTextField(
           width: 270.w,
           height: 50.h,
           child: TextField(
+            onChanged: (value)=> func!(value),
             keyboardType: TextInputType.multiline,
             decoration: InputDecoration(
               hintText: hintText,
