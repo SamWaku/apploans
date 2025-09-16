@@ -34,7 +34,16 @@ class SignInController {
           if(!cred.user!.emailVerified){
             //
           }
-        } catch (e) {}
+
+          var user = cred.user;
+          if(user!= null){
+            //
+          }else{
+            //
+          }
+        } catch (e) {
+          print(e);
+        }
       }
     } catch (e) {
       print(e);
