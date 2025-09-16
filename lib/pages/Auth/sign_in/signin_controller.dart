@@ -1,4 +1,5 @@
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,7 +8,7 @@ class SignInController{
 
   const SignInController({ required this.context});
 
-  void handleSignIn(String type){
+  Future<void> handleSignIn(String type) async {
     try{
       if(type == "email"){
         final state = context.read<SignInBloc>().state;
@@ -19,6 +20,12 @@ class SignInController{
         }
 
         if(password.isEmpty){
+
+        }
+
+        try{
+          final cred = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
+        }catch(e){
 
         }
       }
