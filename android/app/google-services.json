@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1072171080438",
+    "project_id": "apploans-c0325",
+    "storage_bucket": "apploans-c0325.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072171080438:android:5d6251d3a5f0f7248b6ad7",
+        "android_client_info": {
+          "package_name": "com.techohns.apploans.apploans"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfNRpamL05e5Vf75bif0udFfrKU37R4fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
