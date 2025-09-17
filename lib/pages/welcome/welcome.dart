@@ -1,5 +1,4 @@
 import 'package:apploans/common/values/colors.dart';
-import 'package:apploans/main.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_events.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_states.dart';

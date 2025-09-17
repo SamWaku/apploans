@@ -17,11 +17,13 @@ class SignInController {
         String password = state.password;
 
         if (emailAddress.isEmpty) {
-          toastInfo(msg: "Please enter email");
+          toastInfo(msg: "Please enter email", context: context);
+          return;
         }
 
         if (password.isEmpty) {
-          toastInfo(msg: "Please enter password");
+          toastInfo(msg: "Please enter password", context: context);
+          return;
         }
 
         try {
@@ -31,29 +33,39 @@ class SignInController {
           );
 
           if (cred.user == null) {
-            toastInfo(msg: "User not found");
+            toastInfo(msg: "User not found", context: context);
+            return;
           }
 
           if (!cred.user!.emailVerified) {
-            toastInfo(msg: "User not verified");
+            toastInfo(msg: "User not verified", context: context);
+            return;
           }
 
           var user = cred.user;
           if (user != null) {
-            toastInfo(msg: "Success");
+            toastInfo(msg: "Success", context: context);
+            return;
           } else {
-            toastInfo(msg: "User not found");
+            toastInfo(msg: "User not found", context: context);
+            return;
           }
         } on FirebaseAuthException catch (e) {
           if (e.code == 'user-not-found') {
-            toastInfo(msg: e.toString());
+            toastInfo(msg: "User not found", context: context);
+            return;
           } else if (e.code == 'wrong-password') {
-            toastInfo(msg: e.toString());
+            toastInfo(msg: "Wrong password", context: context);
+            return;
+          } else {
+            toastInfo(msg: "Authentication failed: ${e.message}", context: context);
+            return;
           }
         }
       }
     } catch (e) {
-      toastInfo(msg: e.toString());
+      toastInfo(msg: "An error occurred: ${e.toString()}", context: context);
+      return;
     }
   }
 }
