@@ -27,22 +27,26 @@ class SignInController {
             password: password,
           );
 
-          if(cred.user == null){
-            //
+          if (cred.user == null) {
+            print("user not found");
           }
 
-          if(!cred.user!.emailVerified){
-            //
+          if (!cred.user!.emailVerified) {
+            print("user not verified");
           }
 
           var user = cred.user;
-          if(user!= null){
-            //
-          }else{
-            //
+          if (user != null) {
+            print("user exists");
+          } else {
+            print("user doesn;t exist");
           }
-        } catch (e) {
-          print(e);
+        } on FirebaseAuthException catch (e) {
+          if (e.code == 'user-not-found') {
+            print("user with that email not found");
+          } else if (e.code == 'wrong-password') {
+            print("user password does not exist");
+          }
         }
       }
     } catch (e) {

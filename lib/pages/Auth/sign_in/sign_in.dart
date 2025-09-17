@@ -1,6 +1,7 @@
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/bloc/signin_events.dart';
 import 'package:apploans/pages/Auth/bloc/signin_states.dart';
+import 'package:apploans/pages/Auth/sign_in/signin_controller.dart';
 import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,8 +45,10 @@ class _SignInState extends State<SignIn> {
                           context.read<SignInBloc>().add(PasswordEvent(value));
                         }),
                     forgotPasswordText(),
-                    buildLoginRegButton("Login", "Login"),
-                    buildLoginRegButton("Register", "Register"),
+                    buildLoginRegButton("Login", "Login",(){
+                      SignInController(context: context).handleSignIn("email");
+                    }),
+                    buildLoginRegButton("Register", "Register", (){}),
                   ],
                 ),
               )
