@@ -1,4 +1,5 @@
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
+import 'package:apploans/utils/flutter_toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,10 +17,12 @@ class SignInController {
         String password = state.password;
 
         if (emailAddress.isEmpty) {
-          //
+          toastInfo(msg: "Please enter email");
         }
 
-        if (password.isEmpty) {}
+        if (password.isEmpty) {
+          toastInfo(msg: "Please enter password");
+        }
 
         try {
           final cred = await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -28,29 +31,29 @@ class SignInController {
           );
 
           if (cred.user == null) {
-            print("user not found");
+            toastInfo(msg: "User not found");
           }
 
           if (!cred.user!.emailVerified) {
-            print("user not verified");
+            toastInfo(msg: "User not verified");
           }
 
           var user = cred.user;
           if (user != null) {
-            print("user exists");
+            toastInfo(msg: "Success");
           } else {
-            print("user doesn;t exist");
+            toastInfo(msg: "User not found");
           }
         } on FirebaseAuthException catch (e) {
           if (e.code == 'user-not-found') {
-            print("user with that email not found");
+            toastInfo(msg: e.toString());
           } else if (e.code == 'wrong-password') {
-            print("user password does not exist");
+            toastInfo(msg: e.toString());
           }
         }
       }
     } catch (e) {
-      print(e);
+      toastInfo(msg: e.toString());
     }
   }
 }
