@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             MaterialApp(debugShowCheckedModeBanner: false, home: Welcome(), routes:{
               "myHomePage": (context) => const MyHomePage(title: "Home"),
               "signIn": (context) => const SignIn(),
-              "register": (context) => SignUp()
+              "register": (context) => const SignUp()
             },)
       ),
     );
