@@ -2,9 +2,9 @@ import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar buildAppBar() {
+AppBar buildAppBar(String title) {
   return AppBar(
-    title: Text("Login", style: TextStyle(color: AppColors.primaryText)),
+    title: Text(title, style: TextStyle(color: AppColors.primaryText)),
     centerTitle: true,
   );
 }

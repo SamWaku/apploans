@@ -20,7 +20,7 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return BlocBuilder<SignInBloc, SignInState>(builder: (context, state){
       return Scaffold(
-        appBar: buildAppBar(),
+        appBar: buildAppBar("Login"),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
