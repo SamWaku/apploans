@@ -1,5 +1,6 @@
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
+import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
 import 'package:apploans/pages/bloc_providers.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         builder: (context, child) =>
             MaterialApp(debugShowCheckedModeBanner: false, home: Welcome(), routes:{
               "myHomePage": (context) => const MyHomePage(title: "Home"),
-              "signIn": (context) => const SignIn()
+              "signIn": (context) => const SignIn(),
+              "register": (context) => SignUp()
             },)
       ),
     );
