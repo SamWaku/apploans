@@ -9,7 +9,7 @@ class SignUpController{
  final BuildContext context;
  const SignUpController(this.context);
 
- void handleEmailSignUp(){
+ Future<void> handleEmailSignUp() async {
    var state = context.read<SignUpBlocs>().state;
    String username = state.userName;
    String email = state.email;
@@ -37,13 +37,21 @@ class SignUpController{
    }
 
    try{
-
+      final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
    } on FirebaseAuthException catch (e){
      if(e.code == 'weak-password'){
        toastInfo(context: context, msg: "weak password");
      }
      if(e.code == 'email-already-in-use'){
        toastInfo(context: context, msg: "Email already in user");
+     }
+
+     if(e.code == 'email-already-in-use'){
+       toastInfo(context: context, msg: "Email already in user");
+     }
+
+     if(e.code == 'invalid-email'){
+       toastInfo(context: context, msg: "Email is not valid");
      }
    }
  }
