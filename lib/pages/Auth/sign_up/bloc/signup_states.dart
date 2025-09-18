@@ -1,4 +1,4 @@
-//make it immutable to prevent the class from being changed
+//make it immutable to prevent the class from being changed(const and final modifiers)
 class SignUpStates{
   final String userName;
   final String email;
