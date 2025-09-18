@@ -25,34 +25,15 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: AppBlocProviders.allBlocProviders,
       child: ScreenUtilInit(
-        builder: (context, child) =>
-            MaterialApp(debugShowCheckedModeBanner: false, home: Welcome(), routes:{
-              "myHomePage": (context) => const MyHomePage(title: "Home"),
-              "signIn": (context) => const SignIn(),
-              "register": (context) => const SignUp()
-            },)
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Welcome(),
+          routes: {
+            // "myHomePage": (context) => const MyHomePage(title: "Home"),
+            "signIn": (context) => const SignIn(),
+            "register": (context) => const SignUp(),
+          },
+        ),
       ),
     );
   }
