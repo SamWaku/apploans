@@ -7,9 +7,9 @@ class UserNameEvent extends SignUpEvent{
   const UserNameEvent(this.userName);
 }
 
-class EmailNameEvent extends SignUpEvent{
+class EmailEvent extends SignUpEvent{
   final String email;
-  const EmailNameEvent(this.email);
+  const EmailEvent(this.email);
 }
 
 class PasswordEvent extends SignUpEvent {
