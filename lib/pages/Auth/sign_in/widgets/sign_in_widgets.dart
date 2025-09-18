@@ -38,7 +38,20 @@ Widget _reusableIcons(String iconName) {
 
 Widget reusableText(String text) {
   return Container(
-    margin: EdgeInsets.only(bottom: 5.h),
+    margin: EdgeInsets.only(bottom: 5.h ),
+    child: Text(
+      text,
+      style: TextStyle(
+        color: AppColors.primarySecondaryElementText,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.sp,
+      ),
+    ),
+  );
+}
+
+Widget descriptionText(String text){
+  return Container(
     child: Text(
       text,
       style: TextStyle(
@@ -128,7 +141,7 @@ Widget buildLoginRegButton(String buttonName, String buttonType, void Function()
     child: Container(
       width: 300.w,
       height: 50.h,
-      margin: EdgeInsets.only(top: buttonType == "Login" ? 40.h : 15.h),
+      margin: EdgeInsets.only(top:  15.h),
       decoration: BoxDecoration(
         color: buttonType == "Login"
             ? Colors.blueAccent

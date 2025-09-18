@@ -48,7 +48,8 @@ class _SignUpState extends State<SignUp> {
                           (value){
 
                       }),
-                  buildLoginRegButton("Register", "Register", (){
+
+                  buildLoginRegButton("Sign Up", "Register", (){
 
                   }),
                 ],
