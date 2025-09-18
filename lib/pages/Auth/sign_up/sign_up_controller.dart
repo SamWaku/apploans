@@ -42,6 +42,9 @@ class SignUpController{
      if(e.code == 'weak-password'){
        toastInfo(context: context, msg: "weak password");
      }
+     if(e.code == 'email-already-in-use'){
+       toastInfo(context: context, msg: "Email already in user");
+     }
    }
  }
 }
