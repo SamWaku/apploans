@@ -8,6 +8,6 @@ class SignUpBlocs extends Bloc<SignUpEvent, SignUpStates>{
   }
 
   void _userNameEvent(UserNameEvent event, Emitter<SignUpStates> emit){
-
+    emit(state.copyWith(userName: event.userName));
   }
 }
