@@ -18,14 +18,25 @@ class _SignUpState extends State<SignUp> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildThirdPartyLogin(context),
-            Center(child: reusableText("or login with you email")),
+            Center(child: reusableText("Create your account ")),
             Container(
               margin: EdgeInsets.only(top: 36.h),
               padding: EdgeInsets.only(left: 25.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  reusableText("Username"),
+                  buildTextField("email", "Email", "user", "Enter your email",
+                          (value){
+
+                      }
+                  ),
+                  reusableText("Email"),
+                  buildTextField("email", "Email", "user", "Enter your email",
+                          (value){
+
+                      }
+                  ),
                   reusableText("Email"),
                   buildTextField("email", "Email", "user", "Enter your email",
                           (value){
@@ -37,16 +48,16 @@ class _SignUpState extends State<SignUp> {
                           (value){
 
                       }),
-                  forgotPasswordText(),
-                  buildLoginRegButton("Login", "Login",(){
-
-                  }),
                   buildLoginRegButton("Register", "Register", (){
 
                   }),
                 ],
               ),
-            )
+            ),
+            Container(
+                margin: EdgeInsets.only(top: 10.h),
+                child: Center(child: reusableText("or sign up with any"))),
+            buildThirdPartyLogin(context),
           ],
         ),
       ),
