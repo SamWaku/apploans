@@ -17,6 +17,22 @@ class SignUpController{
 
    if(username.isEmpty){
      toastInfo(context: context, msg: "User name is empty");
+     return;
+   }
+
+   if(email.isEmpty){
+     toastInfo(context: context, msg: "Email is empty");
+     return;
+   }
+
+   if(password.isEmpty){
+     toastInfo(context: context, msg: "Password is empty");
+     return;
+   }
+
+   if(confirmPassword.isEmpty){
+     toastInfo(context: context, msg: "Please confirm you password");
+     return;
    }
  }
 }
