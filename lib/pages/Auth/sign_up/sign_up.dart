@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   reusableText("Username"),
-                  buildTextField("username", "Username", "user", "Enter your email",
+                  buildTextField("username", "Username", "user", "Enter your username",
                           (value){
 
                       }
