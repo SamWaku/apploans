@@ -20,19 +20,13 @@ class _SignUpState extends State<SignUp> {
           children: [
             Center(child: reusableText("Create your account ")),
             Container(
-              margin: EdgeInsets.only(top: 36.h),
+              margin: EdgeInsets.only(top: 26.h),
               padding: EdgeInsets.only(left: 25.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   reusableText("Username"),
-                  buildTextField("email", "Email", "user", "Enter your email",
-                          (value){
-
-                      }
-                  ),
-                  reusableText("Email"),
-                  buildTextField("email", "Email", "user", "Enter your email",
+                  buildTextField("username", "Username", "user", "Enter your email",
                           (value){
 
                       }
@@ -44,7 +38,13 @@ class _SignUpState extends State<SignUp> {
                       }
                   ),
                   reusableText("Password"),
-                  buildTextField("email", "Password", "lock", "Enter your password",
+                  buildTextField("password", "Password", "lock", "Enter your password",
+                          (value){
+
+                      }
+                  ),
+                  reusableText("Confirm Password"),
+                  buildTextField("password", "Password", "lock", "Confirm your password",
                           (value){
 
                       }),

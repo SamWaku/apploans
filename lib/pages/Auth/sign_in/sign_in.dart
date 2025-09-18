@@ -25,6 +25,7 @@ class _SignInState extends State<SignIn> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 10.h),
               buildThirdPartyLogin(context),
               Center(child: reusableText("or login with you email")),
               Container(
