@@ -1,6 +1,7 @@
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_states.dart';
 import 'package:apploans/utils/flutter_toast.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,6 +34,14 @@ class SignUpController{
    if(confirmPassword.isEmpty){
      toastInfo(context: context, msg: "Please confirm you password");
      return;
+   }
+
+   try{
+
+   } on FirebaseAuthException catch (e){
+     if(e.code == 'weak-password'){
+       toastInfo(context: context, msg: "weak password");
+     }
    }
  }
 }
