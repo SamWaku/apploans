@@ -17,18 +17,34 @@ class HomePage extends StatelessWidget {
             BottomNavigationBarItem(
               label: "Home",
               icon: SizedBox(
-                width: 15.w,
-                height: 15.h,
-                child: Image.asset("assets/icons/home.png"),
-              )
-          ),
+                width: 20.w,
+                height: 20.h,
+                child: Image.asset("assets/icons/home-outline.png"),
+              ),
+            ),
             BottomNavigationBarItem(
-                label: "Discover",
-                icon: SizedBox(
-                  width: 15.w,
-                  height: 15.h,
-                  child: Image.asset("assets/icons/search.png"),
-                )
+              label: "Discover",
+              icon: SizedBox(
+                width: 20.w,
+                height: 20.h,
+                child: Image.asset("assets/icons/search.png"),
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: "Transactions",
+              icon: SizedBox(
+                width: 20.w,
+                height: 20.h,
+                child: Image.asset("assets/icons/transaction.png"),
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: "Profile",
+              icon: SizedBox(
+                width: 24.w,
+                height: 24.h,
+                child: Image.asset("assets/icons/profile-outline.png"),
+              ),
             ),
           ],
         ),
