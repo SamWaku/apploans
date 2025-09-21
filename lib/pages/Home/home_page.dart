@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Home")),
         body: Column(children: [buildPage(_index)]),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (value){
@@ -43,8 +42,8 @@ class _HomePageState extends State<HomePage> {
                 child: Image.asset("assets/icons/home-outline.png"),
               ),
               activeIcon: SizedBox(
-                  width: 20.w,
-                  height: 20.h,
+                  width: 24.w,
+                  height: 24.h,
                   child: Image.asset("assets/icons/home-outline.png", color: AppColors.payLaterBlue)
               )
             ),
@@ -55,6 +54,11 @@ class _HomePageState extends State<HomePage> {
                 height: 20.h,
                 child: Image.asset("assets/icons/search.png"),
               ),
+                activeIcon: SizedBox(
+                    width: 22.w,
+                    height: 22.h,
+                    child: Image.asset("assets/icons/search.png", color: AppColors.payLaterBlue)
+                )
             ),
             BottomNavigationBarItem(
               label: "transactions",
@@ -63,6 +67,11 @@ class _HomePageState extends State<HomePage> {
                 height: 20.h,
                 child: Image.asset("assets/icons/transaction.png"),
               ),
+                activeIcon: SizedBox(
+                    width: 22.w,
+                    height: 22.h,
+                    child: Image.asset("assets/icons/transaction.png", color: AppColors.payLaterBlue)
+                )
             ),
             BottomNavigationBarItem(
               label: "profile",
@@ -71,6 +80,11 @@ class _HomePageState extends State<HomePage> {
                 height: 24.h,
                 child: Image.asset("assets/icons/profile-outline.png"),
               ),
+                activeIcon: SizedBox(
+                    width: 26.w,
+                    height: 26.h,
+                    child: Image.asset("assets/icons/profile-outline.png", color: AppColors.payLaterBlue)
+                )
 
 
             ),
