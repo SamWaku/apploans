@@ -13,9 +13,11 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(title: Text("Home")),
         body: Column(children: [buildPage(1)]),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-              label: "Home",
+              label: "home",
+              tooltip: "home",
               icon: SizedBox(
                 width: 20.w,
                 height: 20.h,
@@ -23,7 +25,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             BottomNavigationBarItem(
-              label: "Discover",
+              label: "discover",
               icon: SizedBox(
                 width: 20.w,
                 height: 20.h,
@@ -31,7 +33,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             BottomNavigationBarItem(
-              label: "Transactions",
+              label: "transactions",
               icon: SizedBox(
                 width: 20.w,
                 height: 20.h,
@@ -39,12 +41,14 @@ class HomePage extends StatelessWidget {
               ),
             ),
             BottomNavigationBarItem(
-              label: "Profile",
+              label: "profile",
               icon: SizedBox(
                 width: 24.w,
                 height: 24.h,
                 child: Image.asset("assets/icons/profile-outline.png"),
               ),
+
+
             ),
           ],
         ),
