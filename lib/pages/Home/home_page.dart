@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +14,10 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(title: Text("Home")),
         body: Column(children: [buildPage(1)]),
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 1,
           type: BottomNavigationBarType.fixed,
+          selectedItemColor: AppColors.payLaterBlue,
+          unselectedItemColor: AppColors.payLaterGrey,
           items: [
             BottomNavigationBarItem(
               label: "home",
