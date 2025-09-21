@@ -1,21 +1,36 @@
-import 'package:apploans/common/values/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../common/values/colors.dart';
 import '../../utils/application_widgets.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _index = 0;
+  @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text("Home")),
-        body: Column(children: [buildPage(1)]),
+        body: Column(children: [buildPage(_index)]),
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 1,
-          type: BottomNavigationBarType.fixed,
+          onTap: (value){
+            setState((){
+              _index = value;
+            });
+            print(_index);
+          },
+          elevation: 0,
+          // currentIndex: 1,
+          // type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.payLaterBlue,
           unselectedItemColor: AppColors.payLaterGrey,
           items: [
