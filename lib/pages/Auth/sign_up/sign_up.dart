@@ -2,6 +2,7 @@ import 'package:apploans/pages/Auth/sign_in/widgets/sign_in_widgets.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_events.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_states.dart';
+import 'package:apploans/pages/Auth/sign_up/sign_up_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,7 +73,9 @@ class _SignUpState extends State<SignUp> {
                         },
                       ),
 
-                      buildLoginRegButton("Sign Up", "Register", () {}),
+                      buildLoginRegButton("Sign Up", "Login", () {
+                        SignUpController(context: context).handleEmailSignUp();
+                      }),
                     ],
                   ),
                 ),
