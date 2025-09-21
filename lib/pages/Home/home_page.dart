@@ -31,8 +31,8 @@ class _HomePageState extends State<HomePage> {
           elevation: 0,
           currentIndex: _index,
           // type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.payLaterBlue,
-          unselectedItemColor: AppColors.payLaterGrey,
+          //selectedItemColor: AppColors.payLaterBlue,
+         // unselectedItemColor: AppColors.payLaterGrey,
           items: [
             BottomNavigationBarItem(
               label: "home",
@@ -42,6 +42,11 @@ class _HomePageState extends State<HomePage> {
                 height: 20.h,
                 child: Image.asset("assets/icons/home-outline.png"),
               ),
+              activeIcon: SizedBox(
+                  width: 20.w,
+                  height: 20.h,
+                  child: Image.asset("assets/icons/home-outline.png", color: AppColors.payLaterBlue)
+              )
             ),
             BottomNavigationBarItem(
               label: "discover",
