@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/application_widgets.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -8,7 +10,12 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          title: Text("Home")
+        ),
+        body: Column(
+          children: [
+            buildPage(1)
+          ],
         ),
       ),
     );
