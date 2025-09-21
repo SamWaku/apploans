@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
             print(_index);
           },
           elevation: 0,
-          // currentIndex: 1,
+          currentIndex: _index,
           // type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.payLaterBlue,
           unselectedItemColor: AppColors.payLaterGrey,
