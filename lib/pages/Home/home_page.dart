@@ -29,8 +29,9 @@ class _HomePageState extends State<HomePage> {
               topRight: Radius.circular(20.h)
             ),
             color: AppColors.primaryElement,
-            boxShadow: [BoxShadow(
-              color: Colors.grey.withOpacity(0.4),
+            boxShadow: [
+              BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
               spreadRadius: 1,
               blurRadius: 1
             )]
