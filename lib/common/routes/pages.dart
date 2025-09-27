@@ -48,6 +48,7 @@ class AppPages{
     if(settings.name != null){
       var result = routes().where((element) => element.routes == settings.name);
       if(result.isNotEmpty){
+        print("valid route name ${settings.name}");
         return MaterialPageRoute(
             builder: (_) => result.first.page,
             settings: settings
