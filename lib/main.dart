@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
           home: Welcome(),
+          onGenerateRoute: AppPages.GenerateRouteSettings,
           routes: {
             // "myHomePage": (context) => const MyHomePage(title: "Home"),
             "signIn": (context) => const SignIn(),
