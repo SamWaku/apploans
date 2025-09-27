@@ -1,3 +1,4 @@
+import 'package:apploans/common/routes/pages.dart';
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: AppBlocProviders.allBlocProviders,
+      providers: AppPages.routes(),
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,

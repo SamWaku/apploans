@@ -36,7 +36,7 @@ class AppPages{
   }
 
   static List<dynamic> allBlocProviders(BuildContext context){
-    List<dynamic> blocProviders = <dynamic>[];
+    List<BlocProvider> blocProviders = <BlocProvider>[];
     for(var bloc in routes()){
       blocProviders.add(bloc.bloc);
     }
@@ -44,9 +44,6 @@ class AppPages{
     return blocProviders;
   }
 }
-
-
-
 
 
 class PageEntity{
