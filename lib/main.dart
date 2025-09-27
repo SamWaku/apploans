@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: AppPages.routes(),
+      providers: [...AppPages.allBlocProviders(context)],
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HomePage(),
+          home: Welcome(),
           routes: {
             // "myHomePage": (context) => const MyHomePage(title: "Home"),
             "signIn": (context) => const SignIn(),
