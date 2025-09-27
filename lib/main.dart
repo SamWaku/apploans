@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Welcome(),
+          // home: Welcome(),
           onGenerateRoute: AppPages.GenerateRouteSettings,
           routes: {
             // "myHomePage": (context) => const MyHomePage(title: "Home"),
