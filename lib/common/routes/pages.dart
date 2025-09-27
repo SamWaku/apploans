@@ -6,6 +6,7 @@ import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppPages{
@@ -40,8 +41,13 @@ class AppPages{
     for(var bloc in routes()){
       blocProviders.add(bloc.bloc);
     }
-
     return blocProviders;
+  }
+
+  static MaterialPageRoute GenerateRouteSettings(RouteSettings settings){
+    if(settings.name != null){
+      var result = routes().where((element) => element.routes == settings.name);
+    }
   }
 }
 
