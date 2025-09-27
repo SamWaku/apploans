@@ -47,6 +47,13 @@ class AppPages{
   static MaterialPageRoute GenerateRouteSettings(RouteSettings settings){
     if(settings.name != null){
       var result = routes().where((element) => element.routes == settings.name);
+      if(result.isNotEmpty){
+        return MaterialPageRoute(
+            builder: (_) => result.first.page,
+            settings: settings
+        );
+      }
+      return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
     }
   }
 }
