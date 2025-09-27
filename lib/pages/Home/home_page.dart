@@ -24,9 +24,13 @@ class _HomePageState extends State<HomePage> {
           width: 375.w,
           height: 58.h,
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.h),
+              topRight: Radius.circular(20.h)
+            ),
             color: AppColors.primaryElement,
             boxShadow: [BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
+              color: Colors.grey.withOpacity(0.4),
               spreadRadius: 1,
               blurRadius: 1
             )]
