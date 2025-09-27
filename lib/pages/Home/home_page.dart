@@ -20,75 +20,85 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         body: Column(children: [buildPage(_index)]),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (value){
-            setState((){
-              _index = value;
-            });
-            print(_index);
-          },
-          elevation: 0,
-          currentIndex: _index,
-          // type: BottomNavigationBarType.fixed,
-          //selectedItemColor: AppColors.payLaterBlue,
-         // unselectedItemColor: AppColors.payLaterGrey,
-          items: [
-            BottomNavigationBarItem(
-              label: "home",
-              tooltip: "home",
-              icon: SizedBox(
-                width: 20.w,
-                height: 20.h,
-                child: Image.asset("assets/icons/home-outline.png"),
+        bottomNavigationBar: Container(
+          width: 375.w,
+          height: 58.h,
+          decoration: BoxDecoration(
+            color: AppColors.primaryElement,
+            boxShadow: [BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              spreadRadius: 1,
+              blurRadius: 1
+            )]
+          ),
+          child: BottomNavigationBar(
+            onTap: (value){
+              setState((){
+                _index = value;
+              });
+              // print(_index);
+            },
+            elevation: 0,
+            currentIndex: _index,
+            // type: BottomNavigationBarType.fixed,
+            //selectedItemColor: AppColors.payLaterBlue,
+            // unselectedItemColor: AppColors.payLaterGrey,
+            items: [
+              BottomNavigationBarItem(
+                  label: "home",
+                  tooltip: "home",
+                  icon: SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: Image.asset("assets/icons/home-outline.png"),
+                  ),
+                  activeIcon: SizedBox(
+                      width: 24.w,
+                      height: 24.h,
+                      child: Image.asset("assets/icons/home-outline.png", color: AppColors.payLaterBlue)
+                  )
               ),
-              activeIcon: SizedBox(
-                  width: 24.w,
-                  height: 24.h,
-                  child: Image.asset("assets/icons/home-outline.png", color: AppColors.payLaterBlue)
-              )
-            ),
-            BottomNavigationBarItem(
-              label: "discover",
-              icon: SizedBox(
-                width: 20.w,
-                height: 20.h,
-                child: Image.asset("assets/icons/search.png"),
+              BottomNavigationBarItem(
+                  label: "discover",
+                  icon: SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: Image.asset("assets/icons/search.png"),
+                  ),
+                  activeIcon: SizedBox(
+                      width: 22.w,
+                      height: 22.h,
+                      child: Image.asset("assets/icons/search.png", color: AppColors.payLaterBlue)
+                  )
               ),
-                activeIcon: SizedBox(
-                    width: 22.w,
-                    height: 22.h,
-                    child: Image.asset("assets/icons/search.png", color: AppColors.payLaterBlue)
-                )
-            ),
-            BottomNavigationBarItem(
-              label: "transactions",
-              icon: SizedBox(
-                width: 20.w,
-                height: 20.h,
-                child: Image.asset("assets/icons/transaction.png"),
+              BottomNavigationBarItem(
+                  label: "transactions",
+                  icon: SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: Image.asset("assets/icons/transaction.png"),
+                  ),
+                  activeIcon: SizedBox(
+                      width: 22.w,
+                      height: 22.h,
+                      child: Image.asset("assets/icons/transaction.png", color: AppColors.payLaterBlue)
+                  )
               ),
-                activeIcon: SizedBox(
-                    width: 22.w,
-                    height: 22.h,
-                    child: Image.asset("assets/icons/transaction.png", color: AppColors.payLaterBlue)
-                )
-            ),
-            BottomNavigationBarItem(
-              label: "profile",
-              icon: SizedBox(
-                width: 24.w,
-                height: 24.h,
-                child: Image.asset("assets/icons/profile-outline.png"),
+              BottomNavigationBarItem(
+                  label: "profile",
+                  icon: SizedBox(
+                    width: 24.w,
+                    height: 24.h,
+                    child: Image.asset("assets/icons/profile-outline.png"),
+                  ),
+                  activeIcon: SizedBox(
+                      width: 26.w,
+                      height: 26.h,
+                      child: Image.asset("assets/icons/profile-outline.png", color: AppColors.payLaterBlue)
+                  )
               ),
-                activeIcon: SizedBox(
-                    width: 26.w,
-                    height: 26.h,
-                    child: Image.asset("assets/icons/profile-outline.png", color: AppColors.payLaterBlue)
-                )
-
-
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
