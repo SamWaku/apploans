@@ -53,8 +53,8 @@ class AppPages{
             settings: settings
         );
       }
-      return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
     }
+    return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
   }
 }
 
