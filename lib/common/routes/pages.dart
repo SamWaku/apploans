@@ -1,13 +1,17 @@
 // //unify blocprovider routes and pages
 import 'package:apploans/common/routes/routes.dart';
+import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
+import 'package:apploans/pages/Home/home_page.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../pages/Home/bloc/home_blocs.dart';
 
 class AppPages{
   static List<PageEntity> routes() {
@@ -20,7 +24,7 @@ class AppPages{
       PageEntity(
           routes: AppRoutes.SIGN_IN,
           page: SignIn(),
-          bloc: BlocProvider(create: (_) => SignUpBlocs(),)
+          bloc: BlocProvider(create: (_) => SignInBloc(),)
       ),
       PageEntity(
           routes: AppRoutes.SIGN_UP,
@@ -29,8 +33,8 @@ class AppPages{
       ),
       PageEntity(
           routes: AppRoutes.HOMEPAGE,
-          page: Welcome(),
-          bloc: BlocProvider(create: (_) => SignUpBlocs())
+          page: HomePage(),
+          bloc: BlocProvider(create: (_) => HomeBlocs())
       )
     ];
 
@@ -65,6 +69,6 @@ class PageEntity{
   Widget page;
   dynamic bloc;
 
-  PageEntity({required this.routes, required this.page, required this.bloc});
+  PageEntity({required this.routes, required this.page,  required this.bloc});
 }
 
