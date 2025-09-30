@@ -44,7 +44,7 @@ class SignInController {
 
           var user = cred.user;
           if (user != null) {
-            Navigator.of(context).pushNamed("home");
+            Navigator.of(context).pushNamed("/home");
             toastInfo(msg: "Success", context: context);
             return;
           } else {
