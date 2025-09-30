@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                     context.read<HomeBlocs>().add(TriggerHomeEvent(value));
                   },
                   elevation: 0,
-                  currentIndex: _index,
+                  currentIndex: state.index,
                   // type: BottomNavigationBarType.fixed,
                   //selectedItemColor: AppColors.payLaterBlue,
                   // unselectedItemColor: AppColors.payLaterGrey,
