@@ -1,6 +1,6 @@
 class HomeStates{
-  int index;
-  HomeStates({
+  final int index;
+  const HomeStates({
     this.index=0
   });
 }
