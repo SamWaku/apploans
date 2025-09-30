@@ -59,6 +59,7 @@ class AppPages{
         );
       }
     }
+    print("invalid route ${settings.name}");
     return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
   }
 }
