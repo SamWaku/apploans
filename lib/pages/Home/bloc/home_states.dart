@@ -1,6 +1,6 @@
 class HomeStates{
-  int page;
-  HomeStates({
-    this.page=0
+  final int index;
+  const HomeStates({
+    this.index=0
   });
 }

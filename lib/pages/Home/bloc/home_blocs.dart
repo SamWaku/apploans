@@ -3,9 +3,9 @@ import 'package:apploans/pages/Home/bloc/home_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeBlocs extends Bloc<HomeEvents,HomeStates>{
-  HomeBlocs(): super(HomeStates()){
-    on<HomeEvents>((event, emit){
-      emit(HomeStates(page: state.page));
+  HomeBlocs(): super(const HomeStates()){
+    on<TriggerHomeEvent>((event, emit){
+      emit(HomeStates(index: event.index));
     });
   }
 }
