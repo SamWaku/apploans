@@ -1,3 +1,4 @@
+import 'package:apploans/pages/Home/Widgets/home_page_widgets.dart';
 import 'package:apploans/pages/Home/bloc/home_blocs.dart';
 import 'package:apploans/pages/Home/bloc/home_events.dart';
 import 'package:apploans/pages/Home/bloc/home_states.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         builder: (context, state){
           return SafeArea(
             child: Scaffold(
-              body: Column(children: [buildPage(_index)]),
+              body: Column(children: [buildPage(state.index)]),
               bottomNavigationBar: Container(
                 width: 375.w,
                 height: 58.h,
@@ -51,61 +52,7 @@ class _HomePageState extends State<HomePage> {
                   // type: BottomNavigationBarType.fixed,
                   //selectedItemColor: AppColors.payLaterBlue,
                   // unselectedItemColor: AppColors.payLaterGrey,
-                  items: [
-                    BottomNavigationBarItem(
-                        label: "home",
-                        tooltip: "home",
-                        icon: SizedBox(
-                          width: 20.w,
-                          height: 20.h,
-                          child: Image.asset("assets/icons/home-outline.png"),
-                        ),
-                        activeIcon: SizedBox(
-                            width: 24.w,
-                            height: 24.h,
-                            child: Image.asset("assets/icons/home-outline.png", color: AppColors.payLaterBlue)
-                        )
-                    ),
-                    BottomNavigationBarItem(
-                        label: "discover",
-                        icon: SizedBox(
-                          width: 20.w,
-                          height: 20.h,
-                          child: Image.asset("assets/icons/search.png"),
-                        ),
-                        activeIcon: SizedBox(
-                            width: 22.w,
-                            height: 22.h,
-                            child: Image.asset("assets/icons/search.png", color: AppColors.payLaterBlue)
-                        )
-                    ),
-                    BottomNavigationBarItem(
-                        label: "transactions",
-                        icon: SizedBox(
-                          width: 20.w,
-                          height: 20.h,
-                          child: Image.asset("assets/icons/transaction.png"),
-                        ),
-                        activeIcon: SizedBox(
-                            width: 22.w,
-                            height: 22.h,
-                            child: Image.asset("assets/icons/transaction.png", color: AppColors.payLaterBlue)
-                        )
-                    ),
-                    BottomNavigationBarItem(
-                        label: "profile",
-                        icon: SizedBox(
-                          width: 24.w,
-                          height: 24.h,
-                          child: Image.asset("assets/icons/profile-outline.png"),
-                        ),
-                        activeIcon: SizedBox(
-                            width: 26.w,
-                            height: 26.h,
-                            child: Image.asset("assets/icons/profile-outline.png", color: AppColors.payLaterBlue)
-                        )
-                    ),
-                  ],
+                  items: bottomTabs,
                 ),
               ),
             ),
