@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class HomeBlocs extends Bloc<HomeEvents,HomeStates>{
   HomeBlocs(): super(HomeStates()){
     on<HomeEvents>((event, emit){
-      emit(HomeStates(page: state.page));
+      emit(HomeStates(index: state.index));
     });
   }
 }
