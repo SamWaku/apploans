@@ -1,7 +1,4 @@
 import 'package:apploans/common/routes/pages.dart';
-import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
-import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
-import 'package:apploans/pages/Home/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,14 +22,7 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          // home: Welcome(),
           onGenerateRoute: AppPages.GenerateRouteSettings,
-          routes: {
-            // "myHomePage": (context) => const MyHomePage(title: "Home"),
-            "signIn": (context) => const SignIn(),
-            "register": (context) => const SignUp(),
-            "home": (context) => const HomePage()
-          },
         ),
       ),
     );
