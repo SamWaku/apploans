@@ -1,3 +1,6 @@
+import 'package:apploans/pages/Home/bloc/home_blocs.dart';
+import 'package:apploans/pages/Home/bloc/home_events.dart';
+import 'package:apploans/pages/Home/bloc/home_states.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
 
-    return BlocBuilder(
+    return BlocBuilder<HomeBlocs, HomeStates>(
         builder: (context, state){
           return SafeArea(
             child: Scaffold(
@@ -41,10 +44,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: BottomNavigationBar(
                   onTap: (value){
-                    setState((){
-                      _index = value;
-                    });
-                    // print(_index);
+                    context.read<HomeBlocs>().add(TriggerHomeEvent(value));
                   },
                   elevation: 0,
                   currentIndex: _index,
