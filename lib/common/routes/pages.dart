@@ -57,7 +57,7 @@ class AppPages{
         //print("valid route name ${settings.name}");
         bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
         if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
-          return MaterialPageRoute(builder: (_) => SignIn());
+          return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
         }
         return MaterialPageRoute(
             builder: (_) => result.first.page,
