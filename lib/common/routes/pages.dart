@@ -1,5 +1,6 @@
 // //unify blocprovider routes and pages
 import 'package:apploans/common/routes/names.dart';
+import 'package:apploans/global.dart';
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
@@ -48,11 +49,16 @@ class AppPages{
     return blocProviders;
   }
 
+  //check for routes per context
   static MaterialPageRoute GenerateRouteSettings(RouteSettings settings){
     if(settings.name != null){
       var result = routes().where((element) => element.routes == settings.name);
       if(result.isNotEmpty){
-        print("valid route name ${settings.name}");
+        //print("valid route name ${settings.name}");
+        bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
+        if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
+          return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
+        }
         return MaterialPageRoute(
             builder: (_) => result.first.page,
             settings: settings
