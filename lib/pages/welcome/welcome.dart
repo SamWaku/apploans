@@ -1,4 +1,5 @@
 import 'package:apploans/common/values/colors.dart';
+import 'package:apploans/global.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_events.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_states.dart';
@@ -137,6 +138,7 @@ class _WelcomeState extends State<Welcome> {
                     curve: Curves.decelerate,
                   );
                 } else {
+                  Global.storageService.setBool(key, value)
                   Navigator.of(context).pushNamedAndRemoveUntil("/sign_in", (route) => false);
                 }
               },
