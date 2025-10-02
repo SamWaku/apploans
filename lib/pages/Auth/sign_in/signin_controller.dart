@@ -1,8 +1,11 @@
+import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/utils/flutter_toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../global.dart';
 
 class SignInController {
   final BuildContext context;
@@ -44,6 +47,7 @@ class SignInController {
 
           var user = cred.user;
           if (user != null) {
+            Global.storageService.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
             Navigator.of(context).pushNamedAndRemoveUntil("/home", (route) => false);
             toastInfo(msg: "Success", context: context);
             return;
