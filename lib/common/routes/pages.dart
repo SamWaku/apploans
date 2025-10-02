@@ -53,12 +53,20 @@ class AppPages{
   static MaterialPageRoute GenerateRouteSettings(RouteSettings settings){
     if(settings.name != null){
       var result = routes().where((element) => element.routes == settings.name);
+
       if(result.isNotEmpty){
         //print("valid route name ${settings.name}");
         bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
+
         if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
+          bool isloggedin = Global.storageService.getIsLoggedIn();
+          if(isloggedin){
+            return MaterialPageRoute(builder: (_) => HomePage());
+          }
+
           return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
         }
+
         return MaterialPageRoute(
             builder: (_) => result.first.page,
             settings: settings
