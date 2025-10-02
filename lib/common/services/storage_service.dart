@@ -20,4 +20,8 @@ class StorageService{
   bool getDeviceFirstOpen(){
     return _prefs.getBool(AppConstants.STORAGE_DEVICE_OPEN_FIRST_TIME)??false;
   }
+
+  bool getIsLoggedIn(){
+    return _prefs.getString(AppConstants.STORAGE_USER_TOKEN_KEY) == null ? false : true;
+  }
 }
