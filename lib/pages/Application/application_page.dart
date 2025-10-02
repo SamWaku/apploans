@@ -1,28 +1,27 @@
-import 'package:apploans/pages/Home/Widgets/home_page_widgets.dart';
-import 'package:apploans/pages/Home/bloc/home_blocs.dart';
-import 'package:apploans/pages/Home/bloc/home_events.dart';
-import 'package:apploans/pages/Home/bloc/home_states.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../common/values/colors.dart';
 import '../../utils/application_widgets.dart';
+import 'Widgets/application_page_widgets.dart';
+import 'bloc/application_blocs.dart';
+import 'bloc/application_events.dart';
+import 'bloc/application_states.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Application extends StatefulWidget {
+  const Application({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Application> createState() => _ApplicationState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ApplicationState extends State<Application> {
   int _index = 0;
   @override
   Widget build(BuildContext context) {
 
-    return BlocBuilder<HomeBlocs, HomeStates>(
+    return BlocBuilder<ApplicationBlocs, ApplicationStates>(
         builder: (context, state){
           return SafeArea(
             child: Scaffold(
@@ -45,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: BottomNavigationBar(
                   onTap: (value){
-                    context.read<HomeBlocs>().add(TriggerHomeEvent(value));
+                    context.read<ApplicationBlocs>().add(TriggerHomeEvent(value));
                   },
                   elevation: 0,
                   currentIndex: state.index,
