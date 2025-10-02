@@ -62,7 +62,7 @@ class AppPages{
         if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
           bool isloggedin = Global.storageService.getIsLoggedIn();
           if(isloggedin){
-            return MaterialPageRoute(builder: (_) => HomePage());
+            return MaterialPageRoute(builder: (_) => HomePage(), settings: settings);
           }
 
           return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
