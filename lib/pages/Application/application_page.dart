@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../common/values/colors.dart';
-import '../../utils/application_widgets.dart';
+import 'Widgets/application_widgets.dart';
 import 'Widgets/application_page_widgets.dart';
 import 'bloc/application_blocs.dart';
 import 'bloc/application_events.dart';
