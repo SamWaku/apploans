@@ -5,14 +5,14 @@ import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
-import 'package:apploans/pages/Home/home_page.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../pages/Home/bloc/home_blocs.dart';
+import '../../pages/Application/application_page.dart';
+import '../../pages/Application/bloc/application_blocs.dart';
 
 class AppPages{
   static List<PageEntity> routes() {
@@ -34,8 +34,8 @@ class AppPages{
       ),
       PageEntity(
           routes: AppRoutes.HOMEPAGE,
-          page: HomePage(),
-          bloc: BlocProvider(create: (_) => HomeBlocs())
+          page: Application(),
+          bloc: BlocProvider(create: (_) => ApplicationBlocs())
       )
     ];
 
@@ -62,7 +62,7 @@ class AppPages{
         if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
           bool isloggedin = Global.storageService.getIsLoggedIn();
           if(isloggedin){
-            return MaterialPageRoute(builder: (_) => HomePage(), settings: settings);
+            return MaterialPageRoute(builder: (_) => Application(), settings: settings);
           }
 
           return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
