@@ -111,7 +111,7 @@ Widget searchView(){
             borderRadius: BorderRadius.all(Radius.circular(13.w)),
             border: Border.all(color: AppColors.primaryText),
           ),
-          child: ,
+          child: Image.asset("assets/icons/options.png"),
         ),
       )
     ],
