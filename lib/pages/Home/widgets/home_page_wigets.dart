@@ -95,7 +95,7 @@ Widget searchView(){
                   color: AppColors.primaryText,
                   fontFamily: "Avenir",
                   fontWeight: FontWeight.normal,
-                  fontSize: 12.sp,
+                  fontSize: 15.sp,
                 ),
                 autocorrect: true,
               ),
