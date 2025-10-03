@@ -18,10 +18,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: homeBuildAppBar(),
       body: Container(
+        margin: EdgeInsets.only(left: 7.w, right: 7.w),
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(left: 7.w, right: 7.w),
               child: Text("Hello", style: TextStyle(
                 color: AppColors.primaryThirdElementText,
                 fontWeight: FontWeight.bold,
