@@ -54,12 +54,9 @@ Widget searchView(){
   return Row(
     children: [
       Container(
-        width: 250.w,
+        width: 290.w,
         height: 50.h,
         color: Colors.red,
-        decoration: BoxDecoration(
-          borderRadius:
-        ),
       )
     ],
   );
