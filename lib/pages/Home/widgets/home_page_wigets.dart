@@ -108,8 +108,10 @@ Widget searchView(){
           width: 40.w,
           height: 40.h,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(13.w))
+            borderRadius: BorderRadius.all(Radius.circular(13.w)),
+            border: Border.all(color: AppColors.primaryText),
           ),
+          child: ,
         ),
       )
     ],
