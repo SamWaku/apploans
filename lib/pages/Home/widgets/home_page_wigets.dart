@@ -29,3 +29,7 @@ AppBar homeBuildAppBar(){
     ),
   );
 }
+
+Widget homePageText(String text, FontWeight? fontWeight, double? fontSize){
+  return Text(text, style: TextStyle(fontSize: fontSize, fontWeight: fontWeight));
+}
