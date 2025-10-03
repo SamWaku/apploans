@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
+              margin: EdgeInsets.only(top: 20.h),
               child: Text("Hello", style: TextStyle(
                 color: AppColors.primaryThirdElementText,
                 fontWeight: FontWeight.bold,
