@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: homeBuildAppBar(),
       body: Container(
-        margin: EdgeInsets.only(left: 7.w, right: 7.w),
+        margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
         child: Column(
           children: [
             Container(
