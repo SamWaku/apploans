@@ -59,6 +59,8 @@ Widget searchView(){
         height: 40.h,
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
+          borderRadius: BorderRadius.circular(15.h),
+          border: Border.all(color: AppColors.primaryFourthElementText)
         ),
       )
     ],
