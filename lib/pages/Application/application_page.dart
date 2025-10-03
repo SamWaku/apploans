@@ -25,7 +25,7 @@ class _ApplicationState extends State<Application> {
         builder: (context, state){
           return SafeArea(
             child: Scaffold(
-              body: Column(children: [buildPage(state.index)]),
+              body: buildPage(state.index),
               bottomNavigationBar: Container(
                 width: 375.w,
                 height: 58.h,
