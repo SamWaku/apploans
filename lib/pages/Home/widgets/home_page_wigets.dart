@@ -51,5 +51,16 @@ Widget homePageText(
 }
 
 Widget searchView(){
-  return Container();
+  return Row(
+    children: [
+      Container(
+        width: 250.w,
+        height: 50.h,
+        color: Colors.red,
+        decoration: BoxDecoration(
+          borderRadius:
+        ),
+      )
+    ],
+  );
 }

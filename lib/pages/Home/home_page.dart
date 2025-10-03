@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
                 AppColors.primaryText,
               ),
             ),
+            searchView()
           ],
         ),
       ),
