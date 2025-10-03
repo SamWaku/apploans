@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20.h),
+              margin: EdgeInsets.only(top: 10.h),
               child: Text("Samuel Wakumelo",
                   style: TextStyle(
                   color: AppColors.primaryText,
