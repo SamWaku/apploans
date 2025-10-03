@@ -70,39 +70,42 @@ Widget searchView(){
               height: 16.w,
               child: Image.asset("assets/icons/search.png"),
             ),
-            GestureDetector(
-              child: Container(
-                width: 240.w,
-                height: 40.h,
-                child: TextField(
-                  keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(
-                    hintText: "Discover",
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent),
-                    ),
-                    disabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent),
-                    ),
-                    hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
+            Container(
+              width: 240.w,
+              height: 40.h,
+              child: TextField(
+                keyboardType: TextInputType.multiline,
+                decoration: InputDecoration(
+                  hintText: "Discover",
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
-                  style: TextStyle(
-                    color: AppColors.primaryText,
-                    fontFamily: "Avenir",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 15.sp,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
-                  autocorrect: true,
+                  disabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
                 ),
+                style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontFamily: "Avenir",
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15.sp,
+                ),
+                autocorrect: true,
               ),
             )
           ],
+        ),
+      ),
+      GestureDetector(
+        child: Container(
+
         ),
       )
     ],
