@@ -20,15 +20,25 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               margin: EdgeInsets.only(top: 20.h),
               child: Text("Hello", style: TextStyle(
                 color: AppColors.primaryThirdElementText,
                 fontWeight: FontWeight.bold,
-                fontSize:24.sp
-              )),
-            )
+                fontSize:24.sp)
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 20.h),
+              child: Text("Samuel Wakumelo",
+                  style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontWeight: FontWeight.bold,
+                  fontSize:24.sp )
+              ),
+            ),
           ],
         ),
       ),
