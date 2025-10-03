@@ -55,7 +55,7 @@ Widget searchView(){
   return Row(
     children: [
       Container(
-        width: 290.w,
+        width: 280.w,
         height: 40.h,
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
