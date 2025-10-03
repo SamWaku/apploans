@@ -5,8 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 AppBar homeBuildAppBar(){
   return AppBar(
     title: Container(
+      margin: EdgeInsets.only(left: 7.w, right: 7.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             width: 15.w,
