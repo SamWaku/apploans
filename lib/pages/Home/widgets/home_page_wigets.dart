@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -55,8 +56,10 @@ Widget searchView(){
     children: [
       Container(
         width: 290.w,
-        height: 50.h,
-        color: Colors.red,
+        height: 40.h,
+        decoration: BoxDecoration(
+          color: AppColors.primaryBackground,
+        ),
       )
     ],
   );
