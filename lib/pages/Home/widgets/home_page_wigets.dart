@@ -69,6 +69,34 @@ Widget searchView(){
               width: 16.w,
               height: 16.w,
               child: Image.asset("assets/icons/search.png"),
+            ),
+            Container(
+              child: TextField(
+                keyboardType: TextInputType.multiline,
+                decoration: InputDecoration(
+                  hintText: "Discover",
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
+                ),
+                style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontFamily: "Avenir",
+                  fontWeight: FontWeight.normal,
+                  fontSize: 12.sp,
+                ),
+                autocorrect: true,
+              ),
             )
           ],
         ),
