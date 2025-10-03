@@ -71,6 +71,8 @@ Widget searchView(){
               child: Image.asset("assets/icons/search.png"),
             ),
             Container(
+              width: 240.w,
+              height: 40.h,
               child: TextField(
                 keyboardType: TextInputType.multiline,
                 decoration: InputDecoration(
