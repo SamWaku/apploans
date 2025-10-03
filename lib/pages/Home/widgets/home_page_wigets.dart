@@ -64,7 +64,8 @@ Widget searchView(){
         ),
         child: Row(
           children: [
-            SizedBox(
+            Container(
+              margin: EdgeInsets.only(left: 17.w),
               width: 16.w,
               height: 16.w,
               child: Image.asset("assets/icons/search.png"),
