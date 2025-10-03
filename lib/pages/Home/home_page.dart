@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
               child: Text("Samuel Wakumelo",
                   style: TextStyle(
                   color: AppColors.primaryText,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.normal,
                   fontSize:24.sp )
               ),
             ),
