@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,6 +31,6 @@ AppBar homeBuildAppBar(){
   );
 }
 
-Widget homePageText(String text, FontWeight? fontWeight, double? fontSize){
-  return Text(text, style: TextStyle(fontSize: fontSize, fontWeight: fontWeight));
+Widget homePageText(String text, FontWeight? fontWeight, double? fontSize, Color color){
+  return Text(text, style: TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight));
 }
