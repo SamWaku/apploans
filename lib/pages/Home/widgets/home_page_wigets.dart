@@ -1,9 +1,8 @@
-import 'package:apploans/common/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar homeBuildAppBar(){
+AppBar homeBuildAppBar() {
   return AppBar(
     title: Container(
       margin: EdgeInsets.only(left: 7.w, right: 7.w),
@@ -21,16 +20,36 @@ AppBar homeBuildAppBar(){
               width: 40.w,
               height: 40.h,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/icons/person.png"))
+                image: DecorationImage(
+                  image: AssetImage("assets/icons/person.png"),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     ),
   );
 }
 
-Widget homePageText(String text, FontWeight? fontWeight, double? fontSize, Color color){
-  return Text(text, style: TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight));
+Widget homePageText(
+  String text,
+  FontWeight? fontWeight,
+  double? fontSize,
+  Color color,
+) {
+  return Container(
+    child: Text(
+      text,
+      style: TextStyle(
+        color: color,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+      ),
+    ),
+  );
+}
+
+Widget searchView(){
+  return Container();
 }

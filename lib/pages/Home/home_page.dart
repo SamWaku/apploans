@@ -24,11 +24,21 @@ class _HomePageState extends State<HomePage> {
           children: [
             Container(
               margin: EdgeInsets.only(top: 20.h),
-              child: homePageText("Hello", FontWeight.bold, 24.sp, AppColors.primaryThirdElementText)
+              child: homePageText(
+                "Hello",
+                FontWeight.bold,
+                24.sp,
+                AppColors.primaryThirdElementText,
+              ),
             ),
             Container(
               margin: EdgeInsets.only(top: 10.h),
-              child: homePageText("Samuel Wakumelo", FontWeight.normal, 24.sp, AppColors.primaryText),
+              child: homePageText(
+                "Samuel Wakumelo",
+                FontWeight.normal,
+                24.sp,
+                AppColors.primaryText,
+              ),
             ),
           ],
         ),
