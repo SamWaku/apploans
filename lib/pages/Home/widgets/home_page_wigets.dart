@@ -6,11 +6,21 @@ AppBar homeBuildAppBar(){
   return AppBar(
     title: Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
             width: 15.w,
             height: 12.h,
             child: Image.asset("assets/icons/menu.png"),
+          ),
+          GestureDetector(
+            child: Container(
+              width: 40.w,
+              height: 40.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/icons/person.png"))
+              ),
+            ),
           )
         ],
       ),
