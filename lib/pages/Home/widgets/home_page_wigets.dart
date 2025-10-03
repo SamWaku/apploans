@@ -62,6 +62,15 @@ Widget searchView(){
           borderRadius: BorderRadius.circular(15.h),
           border: Border.all(color: AppColors.primaryFourthElementText)
         ),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 16.w,
+              height: 16.w,
+              child: Image.asset("assets/icons/search.png"),
+            )
+          ],
+        ),
       )
     ],
   );
