@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.only(top: 20.h),
               child: homePageText(
-                "Hello",
+                "Wagwan",
                 FontWeight.bold,
                 24.sp,
                 AppColors.primaryThirdElementText,
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.only(top: 10.h),
               child: homePageText(
-                "Samuel Wakumelo",
+                "Samuel Wakumelo 😁",
                 FontWeight.normal,
                 24.sp,
                 AppColors.primaryText,
