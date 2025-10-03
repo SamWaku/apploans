@@ -105,7 +105,11 @@ Widget searchView(){
       ),
       GestureDetector(
         child: Container(
-
+          width: 40.w,
+          height: 40.h,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(13.w))
+          ),
         ),
       )
     ],
