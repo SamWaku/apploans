@@ -55,7 +55,7 @@ Widget searchView(){
   return Row(
     children: [
       Container(
-        width: 280.w,
+        width: 260.w,
         height: 40.h,
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
@@ -71,7 +71,7 @@ Widget searchView(){
               child: Image.asset("assets/icons/search.png"),
             ),
             Container(
-              width: 240.w,
+              width: 220.w,
               height: 40.h,
               child: TextField(
                 keyboardType: TextInputType.multiline,
@@ -105,7 +105,7 @@ Widget searchView(){
       ),
       GestureDetector(
         child: Container(
-          width: 40.w,
+          width: 35.w,
           height: 40.h,
           decoration: BoxDecoration(
             color: AppColors.payLaterBlue,
