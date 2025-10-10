@@ -125,7 +125,7 @@ Widget slidersView() {
   return Column(
     children: [
       Container(
-        margin: EdgeInsets.only(top: 10.h),
+        margin: EdgeInsets.only(top: 20.h),
         width: 325.w,
         height: 160.h,
         child: PageView(
