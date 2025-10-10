@@ -120,5 +120,15 @@ Widget searchView(){
 }
 
 Widget slidersView(){
-  return Container();
+  return Column(
+    children: [
+      Container(
+        width: 325.w,
+        height: 160.h,
+        child: PageView(
+          children: [],
+        ),
+      )
+    ],
+  );
 }
