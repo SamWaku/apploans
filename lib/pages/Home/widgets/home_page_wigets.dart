@@ -126,7 +126,13 @@ Widget slidersView(){
         width: 325.w,
         height: 160.h,
         child: PageView(
-          children: [],
+          children: [
+            Container(
+              width: 325.w,
+              height: 160.h,
+              decoration: ,
+            )
+          ],
         ),
       )
     ],
