@@ -143,7 +143,12 @@ Widget slidersView() {
             position: 1,
             decorator: DotsDecorator(
               color: AppColors.primaryThirdElementText,
-              activeColor: AppColors.payLaterBlue
+              activeColor: AppColors.payLaterBlue,
+              size: Size.square(5.0),
+              activeSize: Size(17.0, 5.0),
+              activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)
+              )
             ),
         ),
       )
