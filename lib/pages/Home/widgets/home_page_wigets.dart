@@ -130,7 +130,9 @@ Widget slidersView(){
             Container(
               width: 325.w,
               height: 160.h,
-              decoration: ,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/icons/art.png"))
+              ),
             )
           ],
         ),
