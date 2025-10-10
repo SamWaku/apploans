@@ -51,7 +51,7 @@ Widget homePageText(
   );
 }
 
-Widget searchView(){
+Widget searchView() {
   return Row(
     children: [
       Container(
@@ -60,7 +60,7 @@ Widget searchView(){
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
           borderRadius: BorderRadius.circular(15.h),
-          border: Border.all(color: AppColors.primaryFourthElementText)
+          border: Border.all(color: AppColors.primaryFourthElementText),
         ),
         child: Row(
           children: [
@@ -89,7 +89,9 @@ Widget searchView(){
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.transparent),
                   ),
-                  hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
+                  hintStyle: TextStyle(
+                    color: AppColors.primaryFourthElementText,
+                  ),
                 ),
                 style: TextStyle(
                   color: AppColors.primaryText,
@@ -99,7 +101,7 @@ Widget searchView(){
                 ),
                 autocorrect: true,
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -114,12 +116,12 @@ Widget searchView(){
           ),
           child: Image.asset("assets/icons/options.png"),
         ),
-      )
+      ),
     ],
   );
 }
 
-Widget slidersView(){
+Widget slidersView() {
   return Column(
     children: [
       Container(
@@ -131,12 +133,16 @@ Widget slidersView(){
               width: 325.w,
               height: 160.h,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/icons/art.png"))
+                borderRadius: BorderRadius.all(Radius.circular(20.h)),
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage("assets/icons/art.png"),
+                ),
               ),
-            )
+            ),
           ],
         ),
-      )
+      ),
     ],
   );
 }
