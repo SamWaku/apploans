@@ -130,20 +130,25 @@ Widget slidersView() {
         height: 160.h,
         child: PageView(
           children: [
-            Container(
-              width: 325.w,
-              height: 160.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20.h)),
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage("assets/icons/art.png"),
-                ),
-              ),
-            ),
+            _slidersView(),
           ],
         ),
       ),
     ],
+  );
+}
+
+
+Widget _slidersView({String path = "assets/icons/art.png"}){
+  return Container(
+    width: 325.w,
+    height: 160.h,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(20.h)),
+      image: DecorationImage(
+        fit: BoxFit.fill,
+        image: AssetImage(path),
+      ),
+    ),
   );
 }
