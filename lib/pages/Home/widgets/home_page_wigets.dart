@@ -130,7 +130,9 @@ Widget slidersView() {
         height: 160.h,
         child: PageView(
           children: [
-            _slidersView(),
+            _slidersView(path: "assets/icons/image1.png"),
+            _slidersView(path: "assets/icons/art.png"),
+            _slidersView(path: "assets/icons/image1.png")
           ],
         ),
       ),
