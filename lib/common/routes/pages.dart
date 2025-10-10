@@ -59,14 +59,14 @@ class AppPages{
         bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
 
         //checks if user is logged in and sends them to home page
-        if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
-          bool isloggedin = Global.storageService.getIsLoggedIn();
-          if(isloggedin){
-            return MaterialPageRoute(builder: (_) => Application(), settings: settings);
-          }
-
-          return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
-        }
+        // if(result.first.routes == AppRoutes.INITIAL&&deviceFirstOpen){
+        //   bool isloggedin = Global.storageService.getIsLoggedIn();
+        //   if(isloggedin){
+        //     return MaterialPageRoute(builder: (_) => Application(), settings: settings);
+        //   }
+        //
+        //   return MaterialPageRoute(builder: (_) => SignIn(), settings: settings);
+        // }
 
         return MaterialPageRoute(
             builder: (_) => result.first.page,
