@@ -1,6 +1,5 @@
 import 'package:apploans/common/routes/pages.dart';
 import 'package:apploans/global.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [...AppPages.allBlocProviders(context)],
       child: ScreenUtilInit(
-        designSize: Size(375, 812),
+        designSize: Size(375, 800),
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppPages.GenerateRouteSettings,
