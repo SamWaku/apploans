@@ -118,3 +118,7 @@ Widget searchView(){
     ],
   );
 }
+
+Widget slidersView(){
+  return Container();
+}
