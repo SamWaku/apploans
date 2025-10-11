@@ -5,6 +5,8 @@ import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/pages/Auth/sign_in/sign_in.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/sign_up.dart';
+import 'package:apploans/pages/Home/bloc/home_page_blocs.dart';
+import 'package:apploans/pages/Home/home_page.dart';
 import 'package:apploans/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:apploans/pages/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
@@ -33,9 +35,14 @@ class AppPages{
           bloc: BlocProvider(create: (_) => SignUpBlocs())
       ),
       PageEntity(
-          routes: AppRoutes.HOMEPAGE,
+          routes: AppRoutes.APPLICATION,
           page: Application(),
           bloc: BlocProvider(create: (_) => ApplicationBlocs())
+      ),
+      PageEntity(
+          routes: AppRoutes.HOMEPAGE,
+          page: HomePage(),
+          bloc: BlocProvider(create: (_) => HomePageBlocs())
       )
     ];
 
