@@ -184,7 +184,7 @@ Widget menuView() {
           children: [
             _reusableMenuText(
               "Choose loan",
-              AppColors.primaryElement,
+              AppColors.primaryText,
               FontWeight.bold,
               12.sp,
             ),
