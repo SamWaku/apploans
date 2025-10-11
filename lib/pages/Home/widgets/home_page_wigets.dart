@@ -178,3 +178,9 @@ Widget _slidersView({String path = "assets/icons/art.png"}){
     ),
   );
 }
+
+Widget _menuView(){
+  return Column(
+    children: [],
+  );
+}
