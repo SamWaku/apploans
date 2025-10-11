@@ -184,7 +184,7 @@ Widget menuView() {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _reusableMenuText(
-              "Choose loan",
+              "Select loan Operation",
               AppColors.primaryText,
               FontWeight.bold,
               16.sp,
