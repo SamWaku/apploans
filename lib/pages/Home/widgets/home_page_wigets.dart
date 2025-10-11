@@ -202,6 +202,20 @@ Widget menuView() {
           ],
         ),
       ),
+      Container(
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: AppColors.payLaterBlue,
+                  borderRadius: BorderRadius.circular(17.w),
+                  border: Border.all(color: AppColors.primaryElement)
+              ),
+              child: _reusableMenuText("All", Colors.white, FontWeight.normal, 10.sp),
+            )
+          ],
+        ),
+      )
     ],
   );
 }
