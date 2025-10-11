@@ -134,50 +134,47 @@ Widget slidersView(BuildContext context, HomePageStates state) {
         width: 325.w,
         height: 160.h,
         child: PageView(
-          onPageChanged: (value){
+          onPageChanged: (value) {
             context.read<HomePageBlocs>().add(HomePageDots(value));
           },
           children: [
             _slidersView(path: "assets/image1.PNG"),
             _slidersView(path: "assets/image3.PNG"),
-            _slidersView(path: "assets/image4.PNG")
+            _slidersView(path: "assets/image4.PNG"),
           ],
         ),
       ),
       Container(
         child: DotsIndicator(
-            dotsCount: 3,
-            position: state.index.toDouble(),
-            decorator: DotsDecorator(
-              color: AppColors.primaryThirdElementText,
-              activeColor: AppColors.payLaterBlue,
-              size: Size.square(5.0),
-              activeSize: Size(17.0, 5.0),
-              activeShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5.0)
-              )
+          dotsCount: 3,
+          position: state.index.toDouble(),
+          decorator: DotsDecorator(
+            color: AppColors.primaryThirdElementText,
+            activeColor: AppColors.payLaterBlue,
+            size: Size.square(5.0),
+            activeSize: Size(17.0, 5.0),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
             ),
+          ),
         ),
-      )
+      ),
     ],
   );
 }
 
-Widget _slidersView({String path = "assets/icons/art.png"}){
+Widget _slidersView({String path = "assets/icons/art.png"}) {
   return Container(
     width: 325.w,
     height: 160.h,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(20.h)),
-      image: DecorationImage(
-        fit: BoxFit.fill,
-        image: AssetImage(path),
-      ),
+      image: DecorationImage(fit: BoxFit.fill, image: AssetImage(path)),
     ),
   );
 }
 
-Widget _menuView(){
+Widget _menuView() {
   return Column(
     children: [
       Container(
@@ -185,10 +182,19 @@ Widget _menuView(){
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
           children: [
-
+            Container(
+              child: Text(
+                "Select Loan",
+                style: TextStyle(
+                  color: AppColors.primaryElement,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12.sp,
+                ),
+              ),
+            ),
           ],
         ),
-      )
+      ),
     ],
   );
 }
