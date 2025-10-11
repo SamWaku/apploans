@@ -7,7 +7,7 @@ class HomePageBlocs extends Bloc<HomePageEvents, HomePageStates>{
     on<HomePageDots>(_homePageDots);
   }
 
-  void _homePageDots(HomePageDots, Emitter<HomePageStates> emit){
-
+  void _homePageDots(HomePageDots events, Emitter<HomePageStates> emit){
+    emit(state.copyWith(index: events.index));
   }
 }
