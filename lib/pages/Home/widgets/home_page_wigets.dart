@@ -203,6 +203,7 @@ Widget menuView() {
         ),
       ),
       Container(
+        margin: EdgeInsets.only(top: 5.h),
         child: Row(
           children: [
             Container(
@@ -212,6 +213,7 @@ Widget menuView() {
                   border: Border.all(color: AppColors.primaryElement)
               ),
               child: _reusableMenuText("All", Colors.white, FontWeight.normal, 10.sp),
+              padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
             )
           ],
         ),
