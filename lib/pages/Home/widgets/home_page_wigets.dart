@@ -1,7 +1,11 @@
 import 'package:apploans/common/values/colors.dart';
+import 'package:apploans/pages/Home/bloc/home_page_blocs.dart';
+import 'package:apploans/pages/Home/bloc/home_page_events.dart';
+import 'package:apploans/pages/Home/bloc/home_page_states.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar homeBuildAppBar() {
@@ -122,7 +126,7 @@ Widget searchView() {
   );
 }
 
-Widget slidersView() {
+Widget slidersView(BuildContext context, HomePageStates state) {
   return Column(
     children: [
       Container(
@@ -130,6 +134,10 @@ Widget slidersView() {
         width: 325.w,
         height: 160.h,
         child: PageView(
+          onPageChanged: (value){
+            print(value.toString());
+            context.read<HomePageBlocs>().add(HomePageDots(value));
+          },
           children: [
             _slidersView(path: "assets/icons/image1.png"),
             _slidersView(path: "assets/icons/art.png"),
