@@ -1,6 +1,11 @@
 import 'package:apploans/common/values/colors.dart';
+import 'package:apploans/pages/Home/bloc/home_page_blocs.dart';
+import 'package:apploans/pages/Home/bloc/home_page_events.dart';
+import 'package:apploans/pages/Home/bloc/home_page_states.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar homeBuildAppBar() {
@@ -51,16 +56,16 @@ Widget homePageText(
   );
 }
 
-Widget searchView(){
+Widget searchView() {
   return Row(
     children: [
       Container(
-        width: 280.w,
+        width: 260.w,
         height: 40.h,
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
           borderRadius: BorderRadius.circular(15.h),
-          border: Border.all(color: AppColors.primaryFourthElementText)
+          border: Border.all(color: AppColors.primaryFourthElementText),
         ),
         child: Row(
           children: [
@@ -71,7 +76,7 @@ Widget searchView(){
               child: Image.asset("assets/icons/search.png"),
             ),
             Container(
-              width: 240.w,
+              width: 220.w,
               height: 40.h,
               child: TextField(
                 keyboardType: TextInputType.multiline,
@@ -89,7 +94,9 @@ Widget searchView(){
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.transparent),
                   ),
-                  hintStyle: TextStyle(color: AppColors.primaryFourthElementText),
+                  hintStyle: TextStyle(
+                    color: AppColors.primaryFourthElementText,
+                  ),
                 ),
                 style: TextStyle(
                   color: AppColors.primaryText,
@@ -99,19 +106,89 @@ Widget searchView(){
                 ),
                 autocorrect: true,
               ),
-            )
+            ),
           ],
         ),
       ),
       GestureDetector(
         child: Container(
-          width: 40.w,
+          width: 35.w,
           height: 40.h,
           decoration: BoxDecoration(
+            color: AppColors.payLaterBlue,
             borderRadius: BorderRadius.all(Radius.circular(13.w)),
             border: Border.all(color: AppColors.primaryText),
           ),
           child: Image.asset("assets/icons/options.png"),
+        ),
+      ),
+    ],
+  );
+}
+
+Widget slidersView(BuildContext context, HomePageStates state) {
+  return Column(
+    children: [
+      Container(
+        margin: EdgeInsets.only(top: 20.h),
+        width: 325.w,
+        height: 160.h,
+        child: PageView(
+          onPageChanged: (value){
+            print(value.toString());
+            context.read<HomePageBlocs>().add(HomePageDots(value));
+          },
+          children: [
+            _slidersView(path: "assets/image1.PNG"),
+            _slidersView(path: "assets/image3.PNG"),
+            _slidersView(path: "assets/image4.PNG")
+          ],
+        ),
+      ),
+      Container(
+        child: DotsIndicator(
+            dotsCount: 3,
+            position: state.index.toDouble(),
+            decorator: DotsDecorator(
+              color: AppColors.primaryThirdElementText,
+              activeColor: AppColors.payLaterBlue,
+              size: Size.square(5.0),
+              activeSize: Size(17.0, 5.0),
+              activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)
+              )
+            ),
+        ),
+      )
+    ],
+  );
+}
+
+
+Widget _slidersView({String path = "assets/icons/art.png"}){
+  return Container(
+    width: 325.w,
+    height: 160.h,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(20.h)),
+      image: DecorationImage(
+        fit: BoxFit.fill,
+        image: AssetImage(path),
+      ),
+    ),
+  );
+}
+
+Widget _menuView(){
+  return Column(
+    children: [
+      Container(
+        width: 325.w,
+        margin: EdgeInsets.only(top: 15.h),
+        child: Row(
+          children: [
+
+          ],
         ),
       )
     ],
