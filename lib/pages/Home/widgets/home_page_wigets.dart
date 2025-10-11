@@ -191,9 +191,9 @@ Widget menuView() {
             ),
             _reusableMenuText(
               "See all",
-              AppColors.primaryText,
+              AppColors.primaryThirdElementText,
               FontWeight.normal,
-              12.sp,
+              10.sp,
             ),
           ],
         ),
