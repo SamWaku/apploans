@@ -190,11 +190,14 @@ Widget menuView() {
               FontWeight.bold,
               16.sp,
             ),
-            _reusableMenuText(
-              "See all",
-              AppColors.primaryThirdElementText,
-              FontWeight.normal,
-              10.sp,
+            GestureDetector(
+              onTap: (){},
+              child: _reusableMenuText(
+                "See all",
+                AppColors.primaryThirdElementText,
+                FontWeight.normal,
+                10.sp,
+              ),
             ),
           ],
         ),
