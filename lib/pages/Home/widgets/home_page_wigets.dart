@@ -182,6 +182,7 @@ Widget menuView() {
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             _reusableMenuText(
               "Select loan Operation",
