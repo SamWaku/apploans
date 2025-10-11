@@ -182,7 +182,12 @@ Widget menuView() {
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
           children: [
-
+            _reusableMenuText(
+              "Choose loan",
+              AppColors.primaryElement,
+              FontWeight.bold,
+              12.sp,
+            ),
           ],
         ),
       ),
@@ -190,15 +195,19 @@ Widget menuView() {
   );
 }
 
-
-Widget _reusableMenuText(){
-  return  Container(
+Widget _reusableMenuText(
+  String text,
+  Color color,
+  FontWeight fontWeight,
+  double fontSize,
+) {
+  return Container(
     child: Text(
-      "Select Loan",
+      text,
       style: TextStyle(
-        color: AppColors.primaryElement,
-        fontWeight: FontWeight.bold,
-        fontSize: 12.sp,
+        color: color,
+        fontWeight: fontWeight,
+        fontSize: fontSize,
       ),
     ),
   );
