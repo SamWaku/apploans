@@ -182,19 +182,24 @@ Widget menuView() {
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
           children: [
-            Container(
-              child: Text(
-                "Select Loan",
-                style: TextStyle(
-                  color: AppColors.primaryElement,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12.sp,
-                ),
-              ),
-            ),
+
           ],
         ),
       ),
     ],
+  );
+}
+
+
+Widget _reusableMenuText(){
+  return  Container(
+    child: Text(
+      "Select Loan",
+      style: TextStyle(
+        color: AppColors.primaryElement,
+        fontWeight: FontWeight.bold,
+        fontSize: 12.sp,
+      ),
+    ),
   );
 }
