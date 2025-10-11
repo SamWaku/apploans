@@ -135,7 +135,6 @@ Widget slidersView(BuildContext context, HomePageStates state) {
         height: 160.h,
         child: PageView(
           onPageChanged: (value){
-            print(value.toString());
             context.read<HomePageBlocs>().add(HomePageDots(value));
           },
           children: [
@@ -163,7 +162,6 @@ Widget slidersView(BuildContext context, HomePageStates state) {
     ],
   );
 }
-
 
 Widget _slidersView({String path = "assets/icons/art.png"}){
   return Container(
