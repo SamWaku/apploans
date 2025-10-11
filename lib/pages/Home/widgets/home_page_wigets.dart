@@ -148,7 +148,7 @@ Widget slidersView(BuildContext context, HomePageStates state) {
       Container(
         child: DotsIndicator(
             dotsCount: 3,
-            position: 1,
+            position: state.index.toDouble(),
             decorator: DotsDecorator(
               color: AppColors.primaryThirdElementText,
               activeColor: AppColors.payLaterBlue,
