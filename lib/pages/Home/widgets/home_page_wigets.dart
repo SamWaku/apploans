@@ -186,6 +186,12 @@ Widget menuView() {
               "Choose loan",
               AppColors.primaryText,
               FontWeight.bold,
+              16.sp,
+            ),
+            _reusableMenuText(
+              "See all",
+              AppColors.primaryText,
+              FontWeight.normal,
               12.sp,
             ),
           ],
