@@ -174,7 +174,7 @@ Widget _slidersView({String path = "assets/icons/art.png"}) {
   );
 }
 
-Widget _menuView() {
+Widget menuView() {
   return Column(
     children: [
       Container(
