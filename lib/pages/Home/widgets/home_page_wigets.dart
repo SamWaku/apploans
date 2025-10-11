@@ -181,6 +181,7 @@ Widget menuView() {
         width: 325.w,
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _reusableMenuText(
               "Choose loan",
