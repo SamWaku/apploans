@@ -181,6 +181,11 @@ Widget _slidersView({String path = "assets/icons/art.png"}){
 
 Widget _menuView(){
   return Column(
-    children: [],
+    children: [
+      Container(
+        width: 325.w,
+        margin: EdgeInsets.only(top: 15.h),
+      )
+    ],
   );
 }
