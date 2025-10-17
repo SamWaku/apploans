@@ -27,28 +27,40 @@ class _HomePageState extends State<HomePage> {
             child: CustomScrollView(
               //crossAxisAlignment: CrossAxisAlignment.start,
               slivers: [
-                Container(
-                  margin: EdgeInsets.only(top: 20.h),
-                  child: homePageText(
-                    "Hi",
-                    FontWeight.bold,
-                    24.sp,
-                    AppColors.primaryThirdElementText,
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20.h),
+                    child: homePageText(
+                      "Hi",
+                      FontWeight.bold,
+                      24.sp,
+                      AppColors.primaryThirdElementText,
+                    ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.h),
-                  child: homePageText(
-                    "Samuel Wakumelo ",
-                    FontWeight.normal,
-                    24.sp,
-                    AppColors.primaryText,
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 10.h),
+                    child: homePageText(
+                      "Samuel Wakumelo ",
+                      FontWeight.normal,
+                      24.sp,
+                      AppColors.primaryText,
+                    ),
                   ),
                 ),
-                SizedBox(height: 20.h,),
-                searchView(),
-                slidersView(context, state),
-                menuView()
+                SliverToBoxAdapter(
+                  child: SizedBox(height: 20.h,),
+                ),
+                SliverToBoxAdapter(
+                  child: searchView(),
+                ),
+                SliverToBoxAdapter(
+                  child: slidersView(context, state),
+                ),
+                SliverToBoxAdapter(
+                  child: menuView(),
+                )
               ],
             ),
           );
