@@ -49,9 +49,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SliverToBoxAdapter(
-                  child: SizedBox(height: 20.h,),
-                ),
+                SliverPadding(padding: EdgeInsets.only(top: 20.h)),
                 SliverToBoxAdapter(
                   child: searchView(),
                 ),
