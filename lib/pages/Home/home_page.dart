@@ -62,7 +62,11 @@ class _HomePageState extends State<HomePage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                     ), delegate: SliverChildBuilderDelegate((BuildContext context, int index){
-
+                      return Container(
+                        width: 100.w,
+                        height: 100.w,
+                        color: Colors.red,
+                      );
                   }),
                   ),
                 ),
