@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
         builder: (context, state){
           return Container(
             margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            child: CustomScrollView(
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              slivers: [
                 Container(
                   margin: EdgeInsets.only(top: 20.h),
                   child: homePageText(
