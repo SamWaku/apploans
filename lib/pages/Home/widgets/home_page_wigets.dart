@@ -254,6 +254,7 @@ Widget _reusableButtonText({
   double fontSize = 10
 }) {
   return Container(
+    margin: EdgeInsets.only(right: 20.w),
     decoration: BoxDecoration(
       color: buttonColor,
       borderRadius: BorderRadius.circular(17.w),
