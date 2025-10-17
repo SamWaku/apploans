@@ -191,7 +191,7 @@ Widget menuView() {
               16.sp,
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: _reusableMenuText(
                 "See all",
                 AppColors.primaryThirdElementText,
@@ -203,21 +203,20 @@ Widget menuView() {
         ),
       ),
       Container(
-        margin: EdgeInsets.only(top: 5.h),
+        margin: EdgeInsets.only(top: 10.h),
         child: Row(
+          // crossAxisAlignment: ,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: AppColors.payLaterBlue,
-                  borderRadius: BorderRadius.circular(17.w),
-                  border: Border.all(color: AppColors.primaryElement)
-              ),
-              child: _reusableMenuText("All", Colors.white, FontWeight.normal, 10.sp),
-              padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
-            )
+            _reusableButtonText(),
+            _reusableButtonText(
+              borderColor: Colors.transparent,
+              buttonColor: Colors.transparent,
+              buttonText: "Preview",
+              textColor: Colors.black
+            ),
           ],
         ),
-      )
+      ),
     ],
   );
 }
@@ -237,5 +236,24 @@ Widget _reusableMenuText(
         fontSize: fontSize,
       ),
     ),
+  );
+}
+
+Widget _reusableButtonText({
+  Color borderColor = AppColors.primaryElement,
+  Color buttonColor = AppColors.payLaterBlue,
+  String buttonText = "All",
+  Color textColor = Colors.white,
+  FontWeight fontWeight = FontWeight.normal,
+  double fontSize = 10
+}) {
+  return Container(
+    decoration: BoxDecoration(
+      color: buttonColor,
+      borderRadius: BorderRadius.circular(17.w),
+      border: Border.all(color: borderColor),
+    ),
+    child: _reusableMenuText(buttonText, textColor, fontWeight, fontSize.sp),
+    padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
   );
 }
