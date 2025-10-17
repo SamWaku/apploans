@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: homeBuildAppBar(),
       body: BlocBuilder<HomePageBlocs, HomePageStates>(
-        builder: (context, state){
+        builder: (context, state) {
           return Container(
             margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
             child: CustomScrollView(
@@ -50,15 +50,22 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SliverPadding(padding: EdgeInsets.only(top: 20.h)),
-                SliverToBoxAdapter(
-                  child: searchView(),
+                SliverToBoxAdapter(child: searchView()),
+                SliverToBoxAdapter(child: slidersView(context, state)),
+                SliverToBoxAdapter(child: menuView()),
+                SliverPadding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 18.h,
+                    horizontal: 0.w,
+                  ),
+                  sliver: SliverGrid(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                    ), delegate: SliverChildBuilderDelegate((BuildContext context, int index){
+
+                  }),
+                  ),
                 ),
-                SliverToBoxAdapter(
-                  child: slidersView(context, state),
-                ),
-                SliverToBoxAdapter(
-                  child: menuView(),
-                )
               ],
             ),
           );
