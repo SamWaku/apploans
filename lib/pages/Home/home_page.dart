@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                           width: 100.w,
                           height: 100.w,
                           decoration: BoxDecoration(
-                              image: DecorationImage(image: AssetImage("assets/icons/art.png")),
+                              image: DecorationImage(image: AssetImage("assets/icons/image1.png")),
                             borderRadius: BorderRadius.circular(15.w)
                           ),
                         ),
