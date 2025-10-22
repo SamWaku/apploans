@@ -67,10 +67,13 @@ class _HomePageState extends State<HomePage> {
                     ), delegate: SliverChildBuilderDelegate(
                           childCount: 4,
                           (BuildContext context, int index){
-                      return Container(
-                        width: 100.w,
-                        height: 100.w,
-                        color: Colors.red,
+                      return GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          width: 100.w,
+                          height: 100.w,
+                          color: Colors.red,
+                        ),
                       );
                   }),
                   ),
