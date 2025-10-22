@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisSpacing: 15.w,
                       crossAxisCount: 2,
-                      mainAxisSpacing: 15.h,
+                      mainAxisSpacing: 6.h,
                         childAspectRatio: 1.6
                     ), delegate: SliverChildBuilderDelegate(
                           childCount: 4,
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                           width: 100.w,
                           height: 100.w,
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              image: DecorationImage(image: AssetImage("assets/icons/art.png")),
                             borderRadius: BorderRadius.circular(15.w)
                           ),
                         ),
