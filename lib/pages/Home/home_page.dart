@@ -76,8 +76,11 @@ class _HomePageState extends State<HomePage> {
                           height: 100.w,
                           child: Container(
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("SnapKash")
+                                Container(
+                                  child: Text("SnapKash", style: TextStyle( color: AppColors.primaryElementText, fontWeight: FontWeight.normal, fontSize: 16.sp)),
+                                ),
                               ],
                             ),
                           ),
