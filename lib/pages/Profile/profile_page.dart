@@ -13,10 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: profileAppBar(),
-      body: Column(
-
-      ),
-
+      body: Column(),
     );
   }
 }
