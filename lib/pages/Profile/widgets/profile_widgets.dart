@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar profileAppBar(){
   return AppBar(
@@ -6,9 +7,17 @@ AppBar profileAppBar(){
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(),
+          SizedBox(
+            width: 18.w,
+            height: 12.h,
+            child: Image.asset("assets/icons/menu.png"),
+          ),
           Text("Profile"),
-          SizedBox(),
+          SizedBox(
+            width: 18.w,
+            height: 12.h,
+            child: Image.asset("assets/icons/options.png"),
+          ),
         ],
       ),
     ),
