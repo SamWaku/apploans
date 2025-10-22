@@ -78,6 +78,7 @@ class _HomePageState extends State<HomePage> {
                             padding: EdgeInsets.all(12.w),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   "SnapKash",
@@ -99,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                                   style: TextStyle(
                                     color: AppColors.primaryElementText,
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 10.sp,
+                                    fontSize: 9.sp,
                                   ),
                                 ),
                               ],
