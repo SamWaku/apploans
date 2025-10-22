@@ -75,11 +75,32 @@ class _HomePageState extends State<HomePage> {
                           width: 100.w,
                           height: 100.w,
                           child: Container(
+                            padding: EdgeInsets.all(12.w),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Container(
-                                  child: Text("SnapKash", style: TextStyle( color: AppColors.primaryElementText, fontWeight: FontWeight.normal, fontSize: 16.sp)),
+                                Text(
+                                  "SnapKash",
+                                  maxLines: 1,
+                                  overflow: TextOverflow.fade,
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: AppColors.primaryElementText,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 10.sp,
+                                  ),
+                                ),
+                                SizedBox(height: 3.h),
+                                Text(
+                                  "Get your SnapKash loan at a good return interest",
+                                  maxLines: 1,
+                                  overflow: TextOverflow.fade,
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: AppColors.primaryElementText,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 10.sp,
+                                  ),
                                 ),
                               ],
                             ),
