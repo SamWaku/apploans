@@ -15,8 +15,8 @@ AppBar profileAppBar(){
           Text("Profile"),
           SizedBox(
             width: 18.w,
-            height: 12.h,
-            child: Image.asset("assets/icons/options.png"),
+            height: 18.h,
+            child: Image.asset("assets/icons/more-vertical.png"),
           ),
         ],
       ),
