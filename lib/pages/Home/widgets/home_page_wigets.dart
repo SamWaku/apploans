@@ -264,3 +264,50 @@ Widget _reusableButtonText({
     padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
   );
 }
+
+
+Widget loanOperationGrid(){
+  return Container(
+    width: 100.w,
+    height: 100.w,
+    child: Container(
+      padding: EdgeInsets.all(12.w),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "SnapKash",
+            maxLines: 1,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: AppColors.primaryElementText,
+              fontWeight: FontWeight.bold,
+              fontSize: 10.sp,
+            ),
+          ),
+          SizedBox(height: 3.h),
+          Text(
+            "Get your SnapKash loan at a good return interest",
+            maxLines: 1,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: AppColors.primaryElementText,
+              fontWeight: FontWeight.normal,
+              fontSize: 9.sp,
+            ),
+          ),
+        ],
+      ),
+    ),
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        fit: BoxFit.fill,
+        image: AssetImage("assets/icons/image1.png"),
+      ),
+      borderRadius: BorderRadius.circular(15.w),
+    ),
+  );
+}

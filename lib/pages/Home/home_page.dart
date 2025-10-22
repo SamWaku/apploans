@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisSpacing: 15.w,
                       crossAxisCount: 2,
-                      mainAxisSpacing: 15.h,
+                      mainAxisSpacing: 10.h,
                       childAspectRatio: 1.6,
                     ),
                     delegate: SliverChildBuilderDelegate(childCount: 4, (
@@ -71,49 +71,7 @@ class _HomePageState extends State<HomePage> {
                     ) {
                       return GestureDetector(
                         onTap: () {},
-                        child: Container(
-                          width: 100.w,
-                          height: 100.w,
-                          child: Container(
-                            padding: EdgeInsets.all(12.w),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "SnapKash",
-                                  maxLines: 1,
-                                  overflow: TextOverflow.fade,
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    color: AppColors.primaryElementText,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10.sp,
-                                  ),
-                                ),
-                                SizedBox(height: 3.h),
-                                Text(
-                                  "Get your SnapKash loan at a good return interest",
-                                  maxLines: 1,
-                                  overflow: TextOverflow.fade,
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    color: AppColors.primaryElementText,
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 9.sp,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: AssetImage("assets/icons/image1.png"),
-                            ),
-                            borderRadius: BorderRadius.circular(15.w),
-                          ),
-                        ),
+                        child: loanOperationGrid(),
                       );
                     }),
                   ),
