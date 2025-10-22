@@ -74,6 +74,13 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           width: 100.w,
                           height: 100.w,
+                          child: Container(
+                            child: Column(
+                              children: [
+                                Text("SnapKash")
+                              ],
+                            ),
+                          ),
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
