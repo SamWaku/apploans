@@ -62,23 +62,28 @@ class _HomePageState extends State<HomePage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisSpacing: 15.w,
                       crossAxisCount: 2,
-                      mainAxisSpacing: 6.h,
-                        childAspectRatio: 1.6
-                    ), delegate: SliverChildBuilderDelegate(
-                          childCount: 4,
-                          (BuildContext context, int index){
+                      mainAxisSpacing: 15.h,
+                      childAspectRatio: 1.6,
+                    ),
+                    delegate: SliverChildBuilderDelegate(childCount: 4, (
+                      BuildContext context,
+                      int index,
+                    ) {
                       return GestureDetector(
-                        onTap: (){},
+                        onTap: () {},
                         child: Container(
                           width: 100.w,
                           height: 100.w,
                           decoration: BoxDecoration(
-                              image: DecorationImage(image: AssetImage("assets/icons/image1.png")),
-                            borderRadius: BorderRadius.circular(15.w)
+                            image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage("assets/icons/image1.png"),
+                            ),
+                            borderRadius: BorderRadius.circular(15.w),
                           ),
                         ),
                       );
-                  }),
+                    }),
                   ),
                 ),
               ],
