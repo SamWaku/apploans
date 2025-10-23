@@ -134,63 +134,126 @@ Widget slidersView(BuildContext context, HomePageStates state) {
         width: 325.w,
         height: 160.h,
         child: PageView(
-          onPageChanged: (value){
-            print(value.toString());
+          onPageChanged: (value) {
             context.read<HomePageBlocs>().add(HomePageDots(value));
           },
           children: [
             _slidersView(path: "assets/image1.PNG"),
             _slidersView(path: "assets/image3.PNG"),
-            _slidersView(path: "assets/image4.PNG")
+            _slidersView(path: "assets/image4.PNG"),
           ],
         ),
       ),
       Container(
         child: DotsIndicator(
-            dotsCount: 3,
-            position: state.index.toDouble(),
-            decorator: DotsDecorator(
-              color: AppColors.primaryThirdElementText,
-              activeColor: AppColors.payLaterBlue,
-              size: Size.square(5.0),
-              activeSize: Size(17.0, 5.0),
-              activeShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5.0)
-              )
+          dotsCount: 3,
+          position: state.index.toDouble(),
+          decorator: DotsDecorator(
+            color: AppColors.primaryThirdElementText,
+            activeColor: AppColors.payLaterBlue,
+            size: Size.square(5.0),
+            activeSize: Size(17.0, 5.0),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
             ),
+          ),
         ),
-      )
+      ),
     ],
   );
 }
 
-
-Widget _slidersView({String path = "assets/icons/art.png"}){
+Widget _slidersView({String path = "assets/icons/art.png"}) {
   return Container(
     width: 325.w,
     height: 160.h,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(20.h)),
-      image: DecorationImage(
-        fit: BoxFit.fill,
-        image: AssetImage(path),
-      ),
+      image: DecorationImage(fit: BoxFit.fill, image: AssetImage(path)),
     ),
   );
 }
 
-Widget _menuView(){
+Widget menuView() {
   return Column(
     children: [
       Container(
         width: 325.w,
         margin: EdgeInsets.only(top: 15.h),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-
+            _reusableMenuText(
+              "Select loan Operation",
+              AppColors.primaryText,
+              FontWeight.bold,
+              16.sp,
+            ),
+            GestureDetector(
+              onTap: () {},
+              child: _reusableMenuText(
+                "See all",
+                AppColors.primaryThirdElementText,
+                FontWeight.normal,
+                10.sp,
+              ),
+            ),
           ],
         ),
-      )
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 10.h),
+        child: Row(
+          // crossAxisAlignment: ,
+          children: [
+            _reusableButtonText(),
+            _reusableButtonText(
+              borderColor: Colors.transparent,
+              buttonColor: Colors.transparent,
+              buttonText: "Preview",
+              textColor: Colors.black
+            ),
+          ],
+        ),
+      ),
     ],
+  );
+}
+
+Widget _reusableMenuText(
+  String text,
+  Color color,
+  FontWeight fontWeight,
+  double fontSize,
+) {
+  return Container(
+    child: Text(
+      text,
+      style: TextStyle(
+        color: color,
+        fontWeight: fontWeight,
+        fontSize: fontSize,
+      ),
+    ),
+  );
+}
+
+Widget _reusableButtonText({
+  Color borderColor = AppColors.primaryElement,
+  Color buttonColor = AppColors.payLaterBlue,
+  String buttonText = "All",
+  Color textColor = Colors.white,
+  FontWeight fontWeight = FontWeight.normal,
+  double fontSize = 10
+}) {
+  return Container(
+    decoration: BoxDecoration(
+      color: buttonColor,
+      borderRadius: BorderRadius.circular(17.w),
+      border: Border.all(color: borderColor),
+    ),
+    child: _reusableMenuText(buttonText, textColor, fontWeight, fontSize.sp),
+    padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
   );
 }

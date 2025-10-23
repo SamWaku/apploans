@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 20.h),
                   child: homePageText(
-                    "Wagwan",
+                    "Hi",
                     FontWeight.bold,
                     24.sp,
                     AppColors.primaryThirdElementText,
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   margin: EdgeInsets.only(top: 10.h),
                   child: homePageText(
-                    "Samuel Wakumelo 😁",
+                    "Samuel Wakumelo ",
                     FontWeight.normal,
                     24.sp,
                     AppColors.primaryText,
@@ -47,7 +47,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 20.h,),
                 searchView(),
-                slidersView(context, state)
+                slidersView(context, state),
+                menuView()
               ],
             ),
           );
