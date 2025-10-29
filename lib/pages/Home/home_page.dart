@@ -27,23 +27,29 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  margin: EdgeInsets.only(top: 20.h),
-                  child: homePageText(
-                    "Hi",
-                    FontWeight.bold,
-                    24.sp,
-                    AppColors.primaryThirdElementText,
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.h),
-                  child: homePageText(
-                    "Samuel Wakumelo ",
-                    FontWeight.normal,
-                    24.sp,
-                    AppColors.primaryText,
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20.h),
+                      child: homePageText(
+                        "Hi",
+                        FontWeight.bold,
+                        24.sp,
+                        AppColors.primaryThirdElementText,
+                      ),
+                    ),
+                    SizedBox(width: 10.w),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.h),
+                      child: homePageText(
+                        "Samuel Wakumelo ",
+                        FontWeight.normal,
+                        24.sp,
+                        AppColors.primaryText,
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: 20.h,),
                 searchView(),
