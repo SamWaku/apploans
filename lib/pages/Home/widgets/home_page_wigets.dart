@@ -214,6 +214,12 @@ Widget menuView() {
               buttonText: "Preview",
               textColor: Colors.black,
             ),
+            _reusableButtonText(
+              borderColor: Colors.transparent,
+              buttonColor: Colors.transparent,
+              buttonText: "Recent",
+              textColor: Colors.black,
+            ),
           ],
         ),
       ),
