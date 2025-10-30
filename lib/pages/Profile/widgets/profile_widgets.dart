@@ -18,7 +18,7 @@ AppBar profileAppBar() {
             style: TextStyle(
               color: AppColors.primaryText,
               fontSize: 16.sp,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.normal,
             ),
           ),
           SizedBox(
