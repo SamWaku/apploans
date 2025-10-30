@@ -1,4 +1,5 @@
 import 'package:apploans/pages/Home/home_page.dart';
+import 'package:apploans/pages/Profile/profile_page.dart';
 import 'package:flutter/cupertino.dart';
 
 Widget buildPage(int index) {
@@ -6,7 +7,7 @@ Widget buildPage(int index) {
     HomePage(),
     Center(child: Text("Discover ")),
     Center(child: Text("Transactions")),
-    Center(child: Text("Profile")),
+    ProfilePage(),
   ];
 
   return _widget[index];
