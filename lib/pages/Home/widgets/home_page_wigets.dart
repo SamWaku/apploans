@@ -214,6 +214,12 @@ Widget menuView() {
               buttonText: "Preview",
               textColor: Colors.black
             ),
+            _reusableButtonText(
+                borderColor: Colors.transparent,
+                buttonColor: Colors.transparent,
+                buttonText: "Frequent",
+                textColor: Colors.black
+            ),
           ],
         ),
       ),
@@ -248,6 +254,7 @@ Widget _reusableButtonText({
   double fontSize = 10
 }) {
   return Container(
+    margin: EdgeInsets.only(right: 20.w),
     decoration: BoxDecoration(
       color: buttonColor,
       borderRadius: BorderRadius.circular(17.w),
@@ -255,5 +262,52 @@ Widget _reusableButtonText({
     ),
     child: _reusableMenuText(buttonText, textColor, fontWeight, fontSize.sp),
     padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
+  );
+}
+
+
+Widget loanOperationGrid(){
+  return Container(
+    width: 100.w,
+    height: 100.w,
+    child: Container(
+      padding: EdgeInsets.all(12.w),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "SnapKash",
+            maxLines: 1,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: AppColors.primaryElementText,
+              fontWeight: FontWeight.bold,
+              fontSize: 10.sp,
+            ),
+          ),
+          SizedBox(height: 3.h),
+          Text(
+            "Get your SnapKash loan at a good return interest",
+            maxLines: 1,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: AppColors.primaryElementText,
+              fontWeight: FontWeight.normal,
+              fontSize: 9.sp,
+            ),
+          ),
+        ],
+      ),
+    ),
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        fit: BoxFit.fill,
+        image: AssetImage("assets/icons/image1.png"),
+      ),
+      borderRadius: BorderRadius.circular(15.w),
+    ),
   );
 }

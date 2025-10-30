@@ -21,34 +21,61 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: homeBuildAppBar(),
       body: BlocBuilder<HomePageBlocs, HomePageStates>(
-        builder: (context, state){
+        builder: (context, state) {
           return Container(
             margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.only(top: 20.h),
-                  child: homePageText(
-                    "Hi",
-                    FontWeight.bold,
-                    24.sp,
-                    AppColors.primaryThirdElementText,
+            child: CustomScrollView(
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20.h),
+                    child: homePageText(
+                      "Hi",
+                      FontWeight.bold,
+                      24.sp,
+                      AppColors.primaryThirdElementText,
+                    ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.h),
-                  child: homePageText(
-                    "Samuel Wakumelo ",
-                    FontWeight.normal,
-                    24.sp,
-                    AppColors.primaryText,
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 10.h),
+                    child: homePageText(
+                      "Samuel Wakumelo ",
+                      FontWeight.normal,
+                      24.sp,
+                      AppColors.primaryText,
+                    ),
                   ),
                 ),
-                SizedBox(height: 20.h,),
-                searchView(),
-                slidersView(context, state),
-                menuView()
+                SliverPadding(padding: EdgeInsets.only(top: 20.h)),
+                SliverToBoxAdapter(child: searchView()),
+                SliverToBoxAdapter(child: slidersView(context, state)),
+                SliverToBoxAdapter(child: menuView()),
+                SliverPadding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 18.h,
+                    horizontal: 0.w,
+                  ),
+                  sliver: SliverGrid(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisSpacing: 15.w,
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10.h,
+                      childAspectRatio: 1.6,
+                    ),
+                    delegate: SliverChildBuilderDelegate(childCount: 4, (
+                      BuildContext context,
+                      int index,
+                    ) {
+                      return GestureDetector(
+                        onTap: () {},
+                        child: loanOperationGrid(),
+                      );
+                    }),
+                  ),
+                ),
               ],
             ),
           );
