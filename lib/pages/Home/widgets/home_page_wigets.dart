@@ -220,12 +220,6 @@ Widget menuView() {
               buttonText: "Recent",
               textColor: Colors.black,
             ),
-            _reusableButtonText(
-                borderColor: Colors.transparent,
-                buttonColor: Colors.transparent,
-                buttonText: "Frequent",
-                textColor: Colors.black
-            ),
           ],
         ),
       ),

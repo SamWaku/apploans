@@ -15,17 +15,21 @@ class _ProfilePageState extends State<ProfilePage> {
     return  Scaffold(
       appBar: profileAppBar(),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              width: 80.w,
-              height: 80.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.w),
-                image: DecorationImage(image: AssetImage("asset/icon/profile-icon.png"))
-              ),
-            )
-          ],
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 80.w,
+                height: 80.h,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.w),
+                    image: DecorationImage(image: AssetImage("assets/icons/profile-icon.png"))
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
