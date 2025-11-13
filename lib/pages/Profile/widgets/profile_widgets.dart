@@ -36,7 +36,19 @@ Widget profileImageAndEditButton(){
   return Container(
     alignment: Alignment.bottomRight,
     padding: EdgeInsets.only(right: 6.w),
-    child: Image(width:25.w, height:25.h,image: AssetImage("assets/icons/edit_3.png")),
+    child: Container(
+      child: Image(
+          width:25.w,
+          height:25.h,
+          image: AssetImage("assets/icons/edit.png")),
+        width: 25.w,
+        height: 25.h,
+        padding: EdgeInsets.all(4.0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.w),
+            color: AppColors.payLaterBlue
+        )
+    ),
     width: 80.w,
     height: 80.h,
     decoration: BoxDecoration(
