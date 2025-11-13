@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar profileAppBar() {
   return AppBar(
+    backgroundColor: Colors.white,
     title: Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

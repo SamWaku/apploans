@@ -13,6 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Colors.white,
       appBar: profileAppBar(),
       body: SingleChildScrollView(
         child: Container(
