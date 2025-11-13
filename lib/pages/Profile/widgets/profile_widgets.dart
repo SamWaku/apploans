@@ -55,6 +55,7 @@ Widget buildListView(){
           child: Row(
             children: [
               Container(
+                child: Image(image: AssetImage("assets/icons/settings.png")),
                 width: 40.w,
                 height: 40.h,
                 padding: EdgeInsets.all(7.0),
@@ -62,7 +63,8 @@ Widget buildListView(){
                   borderRadius: BorderRadius.circular(10.w),
                   color: AppColors.payLaterBlue
                 ),
-              )
+              ),
+              Text("Settings", )
             ],
           ),
         ),
