@@ -21,7 +21,8 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              profileImageAndEditButton()
+              profileImageAndEditButton(),
+              buildListView()
             ],
           ),
         ),

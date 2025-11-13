@@ -45,3 +45,28 @@ Widget profileImageAndEditButton(){
     ),
   );
 }
+
+Widget buildListView(){
+  return Column(
+    children: [
+      GestureDetector(
+        onTap: (){},
+        child: Container(
+          child: Row(
+            children: [
+              Container(
+                width: 40.w,
+                height: 40.h,
+                padding: EdgeInsets.all(7.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.w),
+                  color: AppColors.payLaterBlue
+                ),
+              )
+            ],
+          ),
+        ),
+      )
+    ],
+  );
+}
