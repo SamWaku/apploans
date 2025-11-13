@@ -57,7 +57,6 @@ Widget profileImageAndEditButton(){
     ),
   );
 }
-
 Widget buildListView(){
   return Column(
     children: [
@@ -76,6 +75,7 @@ Widget buildListView(){
                   color: AppColors.payLaterBlue
                 ),
               ),
+              SizedBox(width: 10.w),
               Text("Settings", )
             ],
           ),
