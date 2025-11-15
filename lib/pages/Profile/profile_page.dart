@@ -22,9 +22,9 @@ class _ProfilePageState extends State<ProfilePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               profileImageAndEditButton(),
-              SizedBox(height: 10.h),
+              SizedBox(height: 30.h),
               Padding(
-                  padding: EdgeInsets.only(left: 10.w),
+                  padding: EdgeInsets.only(left: 25.w),
                   child: buildListView()
               )
             ],
