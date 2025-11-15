@@ -83,7 +83,7 @@ Widget buildListView(){
                 ),
               ),
               SizedBox(width: 10.w),
-              Text("Settings", )
+              Text("${imagesInfo.keys.elementAt(index)}", )
             ],
           ),
         ),
