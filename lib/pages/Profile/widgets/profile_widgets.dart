@@ -66,7 +66,7 @@ var imagesInfo = <String, String>{
 Widget buildListView(){
   return Column(
     children: [
-      GestureDetector(
+      ...List.generate(imagesInfo.length, (index) => GestureDetector(
         onTap: (){},
         child: Container(
           child: Row(
@@ -77,8 +77,8 @@ Widget buildListView(){
                 height: 40.h,
                 padding: EdgeInsets.all(7.0),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.w),
-                  color: AppColors.payLaterBlue
+                    borderRadius: BorderRadius.circular(10.w),
+                    color: AppColors.payLaterBlue
                 ),
               ),
               SizedBox(width: 10.w),
@@ -86,7 +86,7 @@ Widget buildListView(){
             ],
           ),
         ),
-      )
+      ))
     ],
   );
 }
