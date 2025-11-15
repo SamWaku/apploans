@@ -57,6 +57,12 @@ Widget profileImageAndEditButton(){
     ),
   );
 }
+
+var imagesInfo = <String, String>{
+  "Settings":"settings.png",
+  "Payment details":"credit-card.png"
+};
+
 Widget buildListView(){
   return Column(
     children: [
