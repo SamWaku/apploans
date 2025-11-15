@@ -69,10 +69,11 @@ Widget buildListView(){
       ...List.generate(imagesInfo.length, (index) => GestureDetector(
         onTap: (){},
         child: Container(
+          margin: EdgeInsets.only(bottom: 15.h),
           child: Row(
             children: [
               Container(
-                child: Image(image: AssetImage("assets/icons/settings.png")),
+                child: Image.asset("assets/icons/${imagesInfo.values.elementAt(index)}"),
                 width: 40.w,
                 height: 40.h,
                 padding: EdgeInsets.all(7.0),
