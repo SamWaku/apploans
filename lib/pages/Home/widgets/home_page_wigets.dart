@@ -212,13 +212,13 @@ Widget menuView() {
               borderColor: Colors.transparent,
               buttonColor: Colors.transparent,
               buttonText: "Preview",
-              textColor: Colors.black
+              textColor: Colors.black,
             ),
             _reusableButtonText(
-                borderColor: Colors.transparent,
-                buttonColor: Colors.transparent,
-                buttonText: "Frequent",
-                textColor: Colors.black
+              borderColor: Colors.transparent,
+              buttonColor: Colors.transparent,
+              buttonText: "Recent",
+              textColor: Colors.black,
             ),
           ],
         ),
@@ -251,7 +251,7 @@ Widget _reusableButtonText({
   String buttonText = "All",
   Color textColor = Colors.white,
   FontWeight fontWeight = FontWeight.normal,
-  double fontSize = 10
+  double fontSize = 10,
 }) {
   return Container(
     margin: EdgeInsets.only(right: 20.w),

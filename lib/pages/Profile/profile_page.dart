@@ -13,19 +13,22 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Colors.white,
       appBar: profileAppBar(),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              width: 80.w,
-              height: 80.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.w),
-                image: DecorationImage(image: AssetImage("asset/icon/profile-icon.png"))
-              ),
-            )
-          ],
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              profileImageAndEditButton(),
+              SizedBox(height: 30.h),
+              Padding(
+                  padding: EdgeInsets.only(left: 25.w),
+                  child: buildListView()
+              )
+            ],
+          ),
         ),
       ),
     );
