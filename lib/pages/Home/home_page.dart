@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: EdgeInsets.only(top: 20.h),
                     child: homePageText(
-                      "Hi",
+                      "Hiii",
                       FontWeight.bold,
                       24.sp,
                       AppColors.primaryThirdElementText,
