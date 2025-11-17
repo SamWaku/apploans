@@ -60,7 +60,8 @@ Widget profileImageAndEditButton(){
 
 var imagesInfo = <String, String>{
   "Settings":"settings.png",
-  "Payment details":"credit-card.png"
+  "Payment details":"credit-card.png",
+  "Reminders":"bell-white.png"
 };
 
 Widget buildListView(){
