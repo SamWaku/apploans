@@ -1,0 +1,3 @@
+class SettingsPageEvents{
+  const SettingsPageEvents();
+}
