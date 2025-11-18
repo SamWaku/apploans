@@ -28,7 +28,10 @@ class _SettingsPageState extends State<SettingsPage> {
                   GestureDetector(
                     onTap: () {
                       showDialog(context: context, builder: (BuildContext context){
-                        return AlertDialog();
+                        return AlertDialog(
+                          title: Text("Confirm logout"),
+                          content: Text("Confirm logout"),
+                        );
                       });
                     },
                     child: Container(
