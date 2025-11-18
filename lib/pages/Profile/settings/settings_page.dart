@@ -26,7 +26,11 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      showDialog(context: context, builder: (BuildContext context){
+                        return AlertDialog();
+                      });
+                    },
                     child: Container(
                       height:80.w,
                       decoration: BoxDecoration(
