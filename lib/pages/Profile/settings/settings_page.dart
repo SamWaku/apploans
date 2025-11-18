@@ -22,21 +22,23 @@ class _SettingsPageState extends State<SettingsPage> {
       body: SingleChildScrollView(
         child: BlocBuilder<SettingsPageBlocs, SettingsPageStates>(
           builder: (context, state) {
-            return
-              Container
-                (child: Column
-                (
-                  children:
-                  [
-                    Container(
+            return Container(
+              child: Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
                       height: 100.w,
                       decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/icons/Logout.png"))
+                        image: DecorationImage(
+                          image: AssetImage("assets/icons/Logout.png"),
+                        ),
                       ),
-                    )
-                  ]
-                )
-              );
+                    ),
+                  ),
+                ],
+              ),
+            );
           },
         ),
       ),
