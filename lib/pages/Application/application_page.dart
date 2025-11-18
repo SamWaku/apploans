@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import '../../common/values/colors.dart';
 import 'Widgets/application_widgets.dart';
 import 'Widgets/application_page_widgets.dart';
@@ -26,34 +27,13 @@ class _ApplicationState extends State<Application> {
           return SafeArea(
             child: Scaffold(
               body: buildPage(state.index),
-              bottomNavigationBar: Container(
-                width: 375.w,
-                height: 58.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.h),
-                        topRight: Radius.circular(20.h)
-                    ),
-                    color: AppColors.primaryElement,
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 1
-                      )]
-                ),
-                child: BottomNavigationBar(
-                  onTap: (value){
-                    context.read<ApplicationBlocs>().add(TriggerHomeEvent(value));
-                  },
-                  elevation: 0,
-                  currentIndex: state.index,
-                  // type: BottomNavigationBarType.fixed,
-                  //selectedItemColor: AppColors.payLaterBlue,
-                  // unselectedItemColor: AppColors.payLaterGrey,
-                  items: bottomTabs,
-                ),
-              ),
+              bottomNavigationBar:
+                GNav(tabs: [
+                  GButton(icon: CupertinoIcons.home, text: "Home"),
+                  GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
+                  GButton(icon: CupertinoIcons.search),
+                  GButton(icon: CupertinoIcons.person),
+                ])
             ),
           );
         }
