@@ -1,6 +1,7 @@
 import 'package:apploans/pages/Profile/settings/bloc/settings_blocs.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_events.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_states.dart';
+import 'package:apploans/pages/Profile/settings/widgets/settings_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +16,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: SettingsAppBar(),
       body: SingleChildScrollView(
         child: BlocBuilder<SettingsPageBlocs, SettingsPageStates>(
           builder: (context, state) {
