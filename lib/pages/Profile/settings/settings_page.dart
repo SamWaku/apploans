@@ -28,7 +28,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      height: 100.w,
+                      height:80.w,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("assets/icons/Logout.png"),
