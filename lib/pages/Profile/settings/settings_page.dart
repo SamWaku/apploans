@@ -27,15 +27,24 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      showDialog(context: context, builder: (BuildContext context){
-                        return AlertDialog(
-                          title: Text("Confirm logout"),
-                          content: Text("Confirm logout"),
-                        );
-                      });
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Confirm logout"),
+                            content: Text("Confirm logout"),
+                            actions: [
+                              TextButton(
+                                onPressed: Navigator.of(context).pop,
+                                child: Text("Cancel"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
                     },
                     child: Container(
-                      height:80.w,
+                      height: 80.w,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("assets/icons/Logout.png"),
