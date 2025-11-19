@@ -27,7 +27,7 @@ class _ApplicationState extends State<Application> {
           child: Scaffold(
             body: buildPage(state.index),
             bottomNavigationBar: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
               child: GNav(
                 gap: 8,
                 color: AppColors.payLaterGrey,
