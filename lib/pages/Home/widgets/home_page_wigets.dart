@@ -10,6 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar homeBuildAppBar() {
   return AppBar(
+    backgroundColor: Colors.white,
     title: Container(
       margin: EdgeInsets.only(left: 7.w, right: 7.w),
       child: Row(
