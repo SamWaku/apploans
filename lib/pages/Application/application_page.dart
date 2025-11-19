@@ -28,11 +28,13 @@ class _ApplicationState extends State<Application> {
             child: Scaffold(
               body: buildPage(state.index),
               bottomNavigationBar:
-                GNav(tabs: [
+                GNav(
+                    gap: 8,
+                    tabs: [
                   GButton(icon: CupertinoIcons.home, text: "Home"),
                   GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
-                  GButton(icon: CupertinoIcons.search),
-                  GButton(icon: CupertinoIcons.person),
+                  GButton(icon: CupertinoIcons.search, text: "Explore"),
+                  GButton(icon: CupertinoIcons.person, text: "Profile"),
                 ])
             ),
           );
