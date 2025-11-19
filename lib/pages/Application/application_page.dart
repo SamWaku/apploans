@@ -26,17 +26,21 @@ class _ApplicationState extends State<Application> {
         return SafeArea(
           child: Scaffold(
             body: buildPage(state.index),
-            bottomNavigationBar: GNav(
-              gap: 8,
-              color: AppColors.payLaterGrey,
-              activeColor: Colors.white,
-              tabBackgroundColor: AppColors.payLaterBlue,
-              tabs: [
-                GButton(icon: CupertinoIcons.home, text: "Home"),
-                GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
-                GButton(icon: CupertinoIcons.search, text: "Explore"),
-                GButton(icon: CupertinoIcons.person, text: "Profile"),
-              ],
+            bottomNavigationBar: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
+              child: GNav(
+                gap: 8,
+                color: AppColors.payLaterGrey,
+                activeColor: Colors.white,
+                tabBackgroundColor: AppColors.payLaterBlue,
+                backgroundColor: Colors.transparent,
+                tabs: [
+                  GButton(icon: CupertinoIcons.home, text: "Home"),
+                  GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
+                  GButton(icon: CupertinoIcons.search, text: "Explore"),
+                  GButton(icon: CupertinoIcons.person, text: "Profile"),
+                ],
+              ),
             ),
           ),
         );
