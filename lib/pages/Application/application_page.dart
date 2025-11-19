@@ -21,24 +21,26 @@ class _ApplicationState extends State<Application> {
   int _index = 0;
   @override
   Widget build(BuildContext context) {
-
     return BlocBuilder<ApplicationBlocs, ApplicationStates>(
-        builder: (context, state){
-          return SafeArea(
-            child: Scaffold(
-              body: buildPage(state.index),
-              bottomNavigationBar:
-                GNav(
-                    gap: 8,
-                    tabs: [
-                  GButton(icon: CupertinoIcons.home, text: "Home"),
-                  GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
-                  GButton(icon: CupertinoIcons.search, text: "Explore"),
-                  GButton(icon: CupertinoIcons.person, text: "Profile"),
-                ])
+      builder: (context, state) {
+        return SafeArea(
+          child: Scaffold(
+            body: buildPage(state.index),
+            bottomNavigationBar: GNav(
+              gap: 8,
+              color: AppColors.payLaterGrey,
+              activeColor: Colors.white,
+              tabBackgroundColor: AppColors.payLaterBlue,
+              tabs: [
+                GButton(icon: CupertinoIcons.home, text: "Home"),
+                GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
+                GButton(icon: CupertinoIcons.search, text: "Explore"),
+                GButton(icon: CupertinoIcons.person, text: "Profile"),
+              ],
             ),
-          );
-        }
+          ),
+        );
+      },
     );
   }
 }
