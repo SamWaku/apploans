@@ -25,6 +25,7 @@ class _ApplicationState extends State<Application> {
       builder: (context, state) {
         return SafeArea(
           child: Scaffold(
+            backgroundColor: Colors.white,
             body: buildPage(state.index),
             bottomNavigationBar: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
@@ -34,6 +35,9 @@ class _ApplicationState extends State<Application> {
                 activeColor: Colors.white,
                 tabBackgroundColor: AppColors.payLaterBlue,
                 backgroundColor: Colors.transparent,
+                onTabChange: (value) {
+                  context.read<ApplicationBlocs>().add(TriggerHomeEvent(value));
+                },
                 tabs: [
                   GButton(icon: CupertinoIcons.home, text: "Home"),
                   GButton(icon: CupertinoIcons.square_grid_2x2, text: "Services"),
