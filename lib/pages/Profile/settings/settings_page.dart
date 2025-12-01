@@ -38,6 +38,10 @@ class _SettingsPageState extends State<SettingsPage> {
                                 onPressed: Navigator.of(context).pop,
                                 child: Text("Cancel"),
                               ),
+                              TextButton(
+                                onPressed: Navigator.of(context).pop,
+                                child: Text("Confirm"),
+                              ),
                             ],
                           );
                         },
