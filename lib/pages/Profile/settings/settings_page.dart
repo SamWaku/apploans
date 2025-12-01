@@ -42,9 +42,9 @@ class _SettingsPageState extends State<SettingsPage> {
                                 child: Text("Cancel"),
                               ),
                               TextButton(
-                                onPressed: (){
-                                  Global.storageService.remove(AppConstants.STORAGE_DEVICE_OPEN_FIRST_TIME);
-                          },
+                                onPressed: () => Global.storageService.remove(
+                                  AppConstants.STORAGE_USER_TOKEN_KEY,
+                                ),
                                 child: Text("Confirm"),
                               ),
                             ],
