@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_blocs.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_events.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_states.dart';
@@ -5,6 +6,8 @@ import 'package:apploans/pages/Profile/settings/widgets/settings_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../Global.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -39,7 +42,9 @@ class _SettingsPageState extends State<SettingsPage> {
                                 child: Text("Cancel"),
                               ),
                               TextButton(
-                                onPressed: Navigator.of(context).pop,
+                                onPressed: (){
+                                  Global.storageService.remove(AppConstants.STORAGE_DEVICE_OPEN_FIRST_TIME);
+                          },
                                 child: Text("Confirm"),
                               ),
                             ],
