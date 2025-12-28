@@ -1,3 +1,4 @@
+import 'package:apploans/common/routes/names.dart';
 import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_blocs.dart';
 import 'package:apploans/pages/Profile/settings/bloc/settings_states.dart';
@@ -41,9 +42,12 @@ class _SettingsPageState extends State<SettingsPage> {
                                 child: Text("Cancel"),
                               ),
                               TextButton(
-                                onPressed: () => Global.storageService.remove(
-                                      AppConstants.STORAGE_USER_TOKEN_KEY,
-                                    ),
+                                onPressed: (){
+                                  Global.storageService.remove(
+                                    AppConstants.STORAGE_USER_TOKEN_KEY
+                                  );
+                                  Navigator.of(context).pushNamedAndRemoveUntil(AppRoutes.SIGN_IN, (route) => false);
+                                },
                                 child: Text("Confirm"),
                               ),
                             ],
