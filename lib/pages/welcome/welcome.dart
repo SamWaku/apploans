@@ -139,7 +139,7 @@ class _WelcomeState extends State<Welcome> {
                     curve: Curves.decelerate,
                   );
                 } else {
-                  Global.storageService.setBool(AppConstants.STORAGE_DEVICE_OPEN_FIRST_TIME, true);
+                  Global.storageService!.setBool(AppConstants.STORAGE_DEVICE_OPEN_FIRST_TIME, true);
                   Navigator.of(context).pushNamedAndRemoveUntil("/sign_in", (route) => false);
                 }
               },
