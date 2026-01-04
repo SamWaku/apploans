@@ -20,7 +20,7 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   void logout(){
-    context.read<ApplicationBlocs>().add(TriggerHomeEvent(0));
+    context.read<ApplicationBlocs>().add(TriggerHomeEvent(0)); //resets index to zero
     Global.storageService.remove(
         AppConstants.STORAGE_USER_TOKEN_KEY
     );
