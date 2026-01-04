@@ -18,3 +18,37 @@ AppBar SettingsAppBar() {
     ),
   );
 }
+
+Widget SettingsButton(BuildContext context){
+  return GestureDetector(
+    onTap: () {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text("Confirm logout"),
+            content: Text("Confirm logout"),
+            actions: [
+              TextButton(
+                onPressed: Navigator.of(context).pop,
+                child: Text("Cancel"),
+              ),
+              TextButton(
+                onPressed: () => logout(),
+                child: Text("Confirm"),
+              ),
+            ],
+          );
+        },
+      );
+    },
+    child: Container(
+      height: 80.w,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/icons/Logout.png"),
+        ),
+      ),
+    ),
+  );
+}
