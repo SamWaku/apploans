@@ -37,7 +37,7 @@ class _SettingsPageState extends State<SettingsPage> {
             return Container(
               child: Column(
                 children: [
-                  SettingsButton(context)
+                  SettingsButton(context, logout)
                 ],
               ),
             );

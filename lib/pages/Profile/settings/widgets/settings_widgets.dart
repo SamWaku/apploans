@@ -19,7 +19,7 @@ AppBar SettingsAppBar() {
   );
 }
 
-Widget SettingsButton(BuildContext context){
+Widget SettingsButton(BuildContext context, void Function()? func){
   return GestureDetector(
     onTap: () {
       showDialog(
@@ -34,7 +34,7 @@ Widget SettingsButton(BuildContext context){
                 child: Text("Cancel"),
               ),
               TextButton(
-                onPressed: () => logout(),
+                onPressed: func,
                 child: Text("Confirm"),
               ),
             ],
