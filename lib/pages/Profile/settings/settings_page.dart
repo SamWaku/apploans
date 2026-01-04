@@ -12,11 +12,20 @@ import '../../../global.dart';
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
+
+
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  void logout(){
+    Global.storageService.remove(
+        AppConstants.STORAGE_USER_TOKEN_KEY
+    );
+    Navigator.of(context).pushNamedAndRemoveUntil(AppRoutes.SIGN_IN, (route) => false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,12 +51,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                 child: Text("Cancel"),
                               ),
                               TextButton(
-                                onPressed: (){
-                                  Global.storageService.remove(
-                                    AppConstants.STORAGE_USER_TOKEN_KEY
-                                  );
-                                  Navigator.of(context).pushNamedAndRemoveUntil(AppRoutes.SIGN_IN, (route) => false);
-                                },
+                                onPressed: logout,
                                 child: Text("Confirm"),
                               ),
                             ],
