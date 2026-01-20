@@ -21,7 +21,7 @@ Widget homePageText(
 }
 
 
-Widget _reusableMenuText(
+Widget reusableMenuText(
     String text,
     Color color,
     FontWeight fontWeight,

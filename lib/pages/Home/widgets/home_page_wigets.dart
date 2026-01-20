@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../common/widgets/base_text_widget.dart';
+
 AppBar homeBuildAppBar() {
   return AppBar(
     backgroundColor: Colors.white,
@@ -185,7 +187,7 @@ Widget menuView() {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            _reusableMenuText(
+            reusableMenuText(
               "Select loan Operation",
               AppColors.primaryText,
               FontWeight.bold,
@@ -193,7 +195,7 @@ Widget menuView() {
             ),
             GestureDetector(
               onTap: () {},
-              child: _reusableMenuText(
+              child: reusableMenuText(
                 "See all",
                 AppColors.primaryThirdElementText,
                 FontWeight.normal,
@@ -228,23 +230,6 @@ Widget menuView() {
   );
 }
 
-Widget _reusableMenuText(
-  String text,
-  Color color,
-  FontWeight fontWeight,
-  double fontSize,
-) {
-  return Container(
-    child: Text(
-      text,
-      style: TextStyle(
-        color: color,
-        fontWeight: fontWeight,
-        fontSize: fontSize,
-      ),
-    ),
-  );
-}
 
 Widget _reusableButtonText({
   Color borderColor = AppColors.primaryElement,
@@ -261,7 +246,7 @@ Widget _reusableButtonText({
       borderRadius: BorderRadius.circular(17.w),
       border: Border.all(color: borderColor),
     ),
-    child: _reusableMenuText(buttonText, textColor, fontWeight, fontSize.sp),
+    child: reusableMenuText(buttonText, textColor, fontWeight, fontSize.sp),
     padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 5.h, bottom: 5.h),
   );
 }
