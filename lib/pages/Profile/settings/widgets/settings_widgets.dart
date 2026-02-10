@@ -1,4 +1,5 @@
 import 'package:apploans/common/values/colors.dart';
+import 'package:apploans/common/widgets/base_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,14 +8,7 @@ AppBar SettingsAppBar() {
     backgroundColor: Colors.white,
     title: Container(
       padding: EdgeInsets.only(left: 85.w),
-      child: Text(
-        "Settings",
-        style: TextStyle(
-          color: AppColors.primaryText,
-          fontWeight: FontWeight.normal,
-          fontSize: 16.sp,
-        ),
-      ),
+      child: reusableMenuText("Settings", AppColors.primaryText, FontWeight.normal, 16.sp),
     ),
   );
 }
