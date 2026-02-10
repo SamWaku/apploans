@@ -1,3 +1,4 @@
+import 'package:apploans/common/entities/user.dart';
 import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/utils/flutter_toast.dart';
@@ -53,6 +54,8 @@ class SignInController {
             String? email = cred.user?.email;
             String? photoUrl = cred.user?.photoURL;
             String? id = cred.user?.uid;
+
+            LoginRequestEntity loginRequestEntity =  LoginRequestEntity(name: name, email: email, avatar: photoUrl, open_id: id, type: 1);
 
             Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
             Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
