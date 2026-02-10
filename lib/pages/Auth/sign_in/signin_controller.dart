@@ -49,6 +49,11 @@ class SignInController {
 
           var user = cred.user;
           if (user != null) {
+            String? name = cred.user?.displayName;
+            String? email = cred.user?.email;
+            String? photoUrl = cred.user?.photoURL;
+            String? id = cred.user?.uid;
+
             Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
             Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
             toastInfo(msg: "Success", context: context);
