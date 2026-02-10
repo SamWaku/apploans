@@ -1,5 +1,6 @@
 import 'package:apploans/common/routes/names.dart';
 import 'package:apploans/common/values/colors.dart';
+import 'package:apploans/common/widgets/base_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,14 +16,7 @@ AppBar profileAppBar() {
             height: 12.h,
             child: Image.asset("assets/icons/menu.png"),
           ),
-          Text(
-            "Profile",
-            style: TextStyle(
-              color: AppColors.primaryText,
-              fontSize: 16.sp,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
+          reusableMenuText("Profile", AppColors.primaryText, FontWeight.normal, 16.sp),
           SizedBox(
             width: 18.w,
             height: 18.h,
