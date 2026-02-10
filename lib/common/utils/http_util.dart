@@ -16,5 +16,11 @@ class HttpUtil{
       headers: {},
       contentType: "application/json",
     );
+    dio = Dio(options);
+  }
+
+  Future post(String path, {dynamic data}) async {
+    var response = await dio.post(path, data: {});
+    return response;
   }
 }
