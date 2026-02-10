@@ -83,4 +83,8 @@ class SignInController {
       return;
     }
   }
+
+  void asyncPostAllData(LoginRequestEntity loginRequestEntity) async {
+
+  }
 }
