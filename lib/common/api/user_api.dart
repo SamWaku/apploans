@@ -1,7 +1,8 @@
 import '../entities/user.dart';
+import '../utils/http_util.dart';
 
 class UserApi{
-  login(LoginRequestEntity? loginRequestEntity) async{
-    var response = await HttpUtil
+  static login({LoginRequestEntity? params}) async{
+    var response = await HttpUtil().post('api/login', queryParameters: params?.toJson());
   }
 }

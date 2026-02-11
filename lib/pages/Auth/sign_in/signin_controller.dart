@@ -1,10 +1,14 @@
+import 'package:apploans/common/api/user_api.dart';
 import 'package:apploans/common/entities/user.dart';
 import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Auth/bloc/siginin_blocs.dart';
 import 'package:apploans/utils/flutter_toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+
 
 import '../../../global.dart';
 
@@ -56,6 +60,7 @@ class SignInController {
             String? id = cred.user?.uid;
 
             LoginRequestEntity loginRequestEntity =  LoginRequestEntity(name: name, email: email, avatar: photoUrl, open_id: id, type: 1);
+            await asyncPostAllData(loginRequestEntity);
 
             Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
             Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
@@ -84,7 +89,13 @@ class SignInController {
     }
   }
 
-  void asyncPostAllData(LoginRequestEntity loginRequestEntity) async {
+  Future<void> asyncPostAllData(LoginRequestEntity loginRequestEntity) async {
+      EasyLoading.show(
+        indicator: CircularProgressIndicator(),
+        maskType: EasyLoadingMaskType.clear,
+        dismissOnTap: false,
+      );
 
+      var result = await UserApi.login(params: loginRequestEntity);
   }
 }
