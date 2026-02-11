@@ -43,6 +43,7 @@ class SignUpController {
       if(credential.user != null){
         await credential.user?.sendEmailVerification();
         await credential.user?.updateDisplayName(username);
+        String pho
         toastInfo(context: context, msg: "Email has been sent to email to verify");
         Navigator.of(context).pop();
       }
