@@ -1,3 +1,4 @@
+import 'package:apploans/common/values/constants.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_blocs.dart';
 import 'package:apploans/pages/Auth/sign_up/bloc/signup_states.dart';
 import 'package:apploans/utils/flutter_toast.dart';
@@ -43,7 +44,9 @@ class SignUpController {
       if(credential.user != null){
         await credential.user?.sendEmailVerification();
         await credential.user?.updateDisplayName(username);
-        String pho
+        String photoUrl = "https://lh3.googleusercontent.com/a/ACg8ocLS-W_jxpj0AWc5THfbvMr5mtMiSuc8tsDk9gUT3tycUMwcofDE=s288-c-no";
+        await credential.user?.updateProfile(displayName: username, photoURL: photoUrl);
+        print("photoUrl: ${photoUrl}");
         toastInfo(context: context, msg: "Email has been sent to email to verify");
         Navigator.of(context).pop();
       }
