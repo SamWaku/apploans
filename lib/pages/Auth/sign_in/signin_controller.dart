@@ -84,6 +84,7 @@ class SignInController {
         }
       }
     } catch (e) {
+      print(e);
       toastInfo(msg: "An error occurred: ${e.toString()}", context: context);
       return;
     }
