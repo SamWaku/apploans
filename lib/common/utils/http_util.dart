@@ -10,7 +10,7 @@ class HttpUtil{
   late Dio dio;
   HttpUtil._internal(){
     BaseOptions options = BaseOptions(
-      baseUrl: "http://10.0.2.2:5021/",
+      baseUrl: "http://10.0.2.2:5021/",  //android emulator
       connectTimeout: Duration(seconds: 5),
       receiveTimeout: Duration(seconds: 5),
       headers: {},
