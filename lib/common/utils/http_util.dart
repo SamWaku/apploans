@@ -1,4 +1,5 @@
 //singleton class that will only exist once in a lifetime
+import 'package:apploans/common/values/constants.dart';
 import 'package:dio/dio.dart';
 
 class HttpUtil{
@@ -10,7 +11,7 @@ class HttpUtil{
   late Dio dio;
   HttpUtil._internal(){
     BaseOptions options = BaseOptions(
-      baseUrl: "http://10.0.2.2:5021/",  //android emulator
+      baseUrl: AppConstants.SERVER_API_URL,  //android emulator
       connectTimeout: Duration(seconds: 5),
       receiveTimeout: Duration(seconds: 5),
       headers: {},
