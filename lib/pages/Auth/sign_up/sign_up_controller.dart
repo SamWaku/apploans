@@ -46,7 +46,6 @@ class SignUpController {
         await credential.user?.updateDisplayName(username);
         String photoUrl = "https://lh3.googleusercontent.com/a/ACg8ocLS-W_jxpj0AWc5THfbvMr5mtMiSuc8tsDk9gUT3tycUMwcofDE=s288-c-no";
         await credential.user?.updateProfile(displayName: username, photoURL: photoUrl);
-        print("photoUrl: ${photoUrl}");
         toastInfo(context: context, msg: "Email has been sent to email to verify");
         Navigator.of(context).pop();
       }
