@@ -61,9 +61,6 @@ class SignInController {
 
             LoginRequestEntity loginRequestEntity =  LoginRequestEntity(name: name, email: email, avatar: photoUrl, open_id: id, type: 1);
             await asyncPostAllData(loginRequestEntity);
-
-            Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
-            Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
             toastInfo(msg: "Success", context: context);
             return;
           } else {
@@ -98,5 +95,13 @@ class SignInController {
       );
 
       var result = await UserApi.login(params: loginRequestEntity);
+      if (result.code == 200) {
+        try{
+          Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
+          Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
+        }catch(e){
+          print(e);
+        }
+      }
   }
 }
