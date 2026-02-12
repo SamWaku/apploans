@@ -106,6 +106,9 @@ class SignInController {
         }catch(e){
           print(e);
         }
+      } else{
+        EasyLoading.dismiss();
+        toastInfo(msg: result.msg!, context: context);
       }
   }
 }
