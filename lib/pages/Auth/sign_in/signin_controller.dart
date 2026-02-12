@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:apploans/common/api/user_api.dart';
 import 'package:apploans/common/entities/user.dart';
 import 'package:apploans/common/values/constants.dart';
@@ -97,8 +99,10 @@ class SignInController {
       var result = await UserApi.login(params: loginRequestEntity);
       if (result.code == 200) {
         try{
-          Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678");
+          Global.storageService.setString(AppConstants.STORAGE_USER_PROFILE_KEY, jsonEncode(result.data!));
+          Global.storageService?.setString(AppConstants.STORAGE_USER_TOKEN_KEY, "123456678"); //save accesstoken
           Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
+          EasyLoading.dismiss();
         }catch(e){
           print(e);
         }
