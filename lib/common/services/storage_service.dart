@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:apploans/common/entities/user.dart';
 import 'package:apploans/common/values/constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService{
@@ -32,10 +33,11 @@ class StorageService{
     return await _prefs.remove(key);
   }
 
-  getUserProfile(){
+  UserItem getUserProfile(){
     var profile = _prefs.getString(AppConstants.STORAGE_USER_PROFILE_KEY) ?? "";
     if(profile.isNotEmpty){
-      UserItem.fromJson(jsonDecode(profile));
+      return UserItem.fromJson(jsonDecode(profile));
     }
+    return UserItem();
   }
 }
