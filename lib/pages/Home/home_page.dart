@@ -1,6 +1,7 @@
 import 'package:apploans/common/values/colors.dart';
 import 'package:apploans/pages/Home/bloc/home_page_blocs.dart';
 import 'package:apploans/pages/Home/bloc/home_page_states.dart';
+import 'package:apploans/pages/Home/home_controller.dart';
 import 'package:apploans/pages/Home/widgets/home_page_wigets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,11 +17,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late HomeController _homeController;
+  @override
+  void initState(){
+    super.initState();
+    _homeController = HomeController(context: context);
+    _homeController.init();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: homeBuildAppBar(),
+      appBar: homeBuildAppBar(_homeController.userprofile.avatar!),
       body: BlocBuilder<HomePageBlocs, HomePageStates>(
         builder: (context, state) {
           return Container(
@@ -43,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: EdgeInsets.only(top: 10.h),
                     child: homePageText(
-                      "Samuel Wakumelo ",
+                      _homeController.userprofile.name!,
                       FontWeight.normal,
                       24.sp,
                       AppColors.primaryText,

@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../common/widgets/base_text_widget.dart';
 
-AppBar homeBuildAppBar() {
+AppBar homeBuildAppBar(String avatar) {
   return AppBar(
     backgroundColor: Colors.white,
     title: Container(
@@ -30,7 +30,7 @@ AppBar homeBuildAppBar() {
               height: 40.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/icons/person.png"),
+                  image: NetworkImage(avatar),
                 ),
               ),
             ),
