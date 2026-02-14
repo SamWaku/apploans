@@ -27,7 +27,7 @@ AppBar profileAppBar() {
     ),
   );
 }
-Widget profileImageAndEditButton(){
+Widget profileImageAndEditButton(String avatar){
   return Container(
     alignment: Alignment.bottomRight,
     padding: EdgeInsets.only(right: 6.w),
@@ -48,7 +48,7 @@ Widget profileImageAndEditButton(){
     height: 80.h,
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.w),
-        image: DecorationImage(image: AssetImage("assets/icons/profile-icon.png"))
+        image: DecorationImage(image: NetworkImage(avatar))
     ),
   );
 }
