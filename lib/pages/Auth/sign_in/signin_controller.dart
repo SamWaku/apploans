@@ -84,6 +84,7 @@ class SignInController {
       }
     } catch (e) {
       print(e);
+      EasyLoading.dismiss();
       toastInfo(msg: "An error occurred: ${e.toString()}", context: context);
       return;
     }
@@ -104,6 +105,7 @@ class SignInController {
           Navigator.of(context).pushNamedAndRemoveUntil("/application", (route) => false);
           EasyLoading.dismiss();
         }catch(e){
+          EasyLoading.dismiss();
           print(e);
         }
       } else{

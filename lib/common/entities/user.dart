@@ -17,7 +17,8 @@ class LoginRequestEntity{
     "email": email,
     "phone": phone,
     "avatar": avatar,
-    "open_id": open_id
+    "open_id": open_id,
+    "online": online
   };
 }
 
@@ -39,8 +40,12 @@ class UserLoginResponseEntity {
       UserLoginResponseEntity(
         code: json["statusCode"],
         msg: json["message"],
-        data: UserItem.fromJson(json["data"]),
-        errors: json["errors"]
+        data: json["data"] != null
+            ? UserItem.fromJson(json["data"])
+            : null,
+        errors: json["errors"] != null
+            ? List<String>.from(json["errors"])
+            : [],
       );
 }
 
@@ -51,7 +56,7 @@ class UserItem {
   String? description;
   String? avatar;
   int? online;
-  String? type;
+  int? type;
 
   UserItem({
     this.access_token,
