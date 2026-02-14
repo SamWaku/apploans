@@ -26,9 +26,10 @@ AppBar homeBuildAppBar(String avatar) {
           ),
           GestureDetector(
             child: Container(
-              width: 40.w,
-              height: 40.h,
+              width: 45.w,
+              height: 45.h,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20.w)),
                 image: DecorationImage(
                   image: NetworkImage(avatar),
                 ),
