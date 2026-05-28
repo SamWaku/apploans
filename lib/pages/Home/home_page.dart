@@ -23,8 +23,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _homeController = HomeController(context: context);
     _homeController.init();
-    print(_homeController.userprofile?.avatar.toString());
-    print(_homeController.userprofile?.name.toString());
   }
 
   @override
