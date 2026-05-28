@@ -29,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              profileImageAndEditButton(_profileController.userprofile.avatar!),
+              profileImageAndEditButton(_profileController.userprofile!.avatar!),
               SizedBox(height: 30.h),
               Padding(
                   padding: EdgeInsets.only(left: 25.w),

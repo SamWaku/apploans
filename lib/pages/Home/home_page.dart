@@ -23,13 +23,15 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _homeController = HomeController(context: context);
     _homeController.init();
+    print(_homeController.userprofile?.avatar.toString());
+    print(_homeController.userprofile?.name.toString());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: homeBuildAppBar(_homeController.userprofile.avatar!),
+      appBar: homeBuildAppBar(_homeController.userprofile!.avatar!),
       body: BlocBuilder<HomePageBlocs, HomePageStates>(
         builder: (context, state) {
           return Container(
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: EdgeInsets.only(top: 10.h),
                     child: homePageText(
-                      _homeController.userprofile.name!,
+                      _homeController.userprofile!.name!,
                       FontWeight.normal,
                       24.sp,
                       AppColors.primaryText,
@@ -76,9 +78,9 @@ class _HomePageState extends State<HomePage> {
                       childAspectRatio: 1.6,
                     ),
                     delegate: SliverChildBuilderDelegate(childCount: 4, (
-                      BuildContext context,
-                      int index,
-                    ) {
+                        BuildContext context,
+                        int index,
+                        ) {
                       return GestureDetector(
                         onTap: () {},
                         child: loanOperationGrid(),

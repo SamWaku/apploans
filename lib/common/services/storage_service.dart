@@ -33,7 +33,7 @@ class StorageService{
     return await _prefs.remove(key);
   }
 
-  UserItem getUserProfile(){
+  UserItem? getUserProfile(){
     var profile = _prefs.getString(AppConstants.STORAGE_USER_PROFILE_KEY) ?? "";
     if(profile.isNotEmpty){
       return UserItem.fromJson(jsonDecode(profile));
