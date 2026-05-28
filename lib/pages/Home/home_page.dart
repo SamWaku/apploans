@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return _homeController.userprofile != null ? Scaffold(
       backgroundColor: Colors.white,
       appBar: homeBuildAppBar(_homeController.userprofile!.avatar!),
       body: BlocBuilder<HomePageBlocs, HomePageStates>(
@@ -93,6 +93,6 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-    );
+    ) : Container();
   }
 }
