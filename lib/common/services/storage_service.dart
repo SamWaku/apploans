@@ -38,6 +38,6 @@ class StorageService{
     if(profile.isNotEmpty){
       return UserItem.fromJson(jsonDecode(profile));
     }
-    return UserItem();
+    return null;
   }
 }
