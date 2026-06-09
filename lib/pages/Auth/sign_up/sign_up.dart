@@ -74,7 +74,7 @@ class _SignUpState extends State<SignUp> {
                       ),
 
                       buildLoginRegButton("Sign Up", "Login", () {
-                        SignUpController(context: context).handleEmailSignUp();
+                        SignUpController(context: context).handleClientRegistration();
                       }),
                     ],
                   ),
